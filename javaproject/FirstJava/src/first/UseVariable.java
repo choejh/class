@@ -86,7 +86,6 @@ public class UseVariable {
 		System.out.println((byte)age); //-56이 나온다. 짤림
 		//역방향 형변환을 주의해야한다.
 		
-		
 	
 	}
 
