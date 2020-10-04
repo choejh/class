@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class OperatorTest {
 
 	public static void main(String[] args) {
-/*
+		/*
 		int num1 = 10;
 		int num2 = 8;
 		
@@ -16,7 +16,7 @@ public class OperatorTest {
 		System.out.println("10/8 = "+num1/(float)num2); //1.25
 		
 		
-//		# °ü°è ºñ±³ ¿¬»êÀÚ		
+//		# ê´€ê³„ ë¹„êµ ì—°ì‚°ì		
 		
 		System.out.println('a' < 'b');		
 //		-> 65 < 66		true
@@ -27,13 +27,13 @@ public class OperatorTest {
 		System.out.println(10.0d == 10.0f);	
 //		->10.0d == 10.0d true
 		System.out.println(0.1d == 0.1f);
-//		->0.1d == 0.1d	false ¼Ò¼öÁ¡Àº Á¡ ±×·³
+//		->0.1d == 0.1d	false ì†Œìˆ˜ì ì€ ì  ê·¸ëŸ¼
 		double d = (double) 0.1f;
 		System.out.println("d => "+ d);
 		
 		System.out.println("(float)d==0.1f->"+ ((float)d==0.1f));
 		
-//		# ³í¸®¿¬»êÀÚ
+//		# ë…¼ë¦¬ì—°ì‚°ì
 		
 		num1=10; 
 		num2=20;
@@ -44,12 +44,12 @@ public class OperatorTest {
 		System.out.println(result2);		
 		
 		if(!(num1==num2)) {
-			System.out.println("num1°ú num2´Â °°Áö¾Ê´Ù.");
+			System.out.println("num1ê³¼ num2ëŠ” ê°™ì§€ì•Šë‹¤.");
 		} else {
-			System.out.println("num1°ú num2´Â °°´Ù");
+			System.out.println("num1ê³¼ num2ëŠ” ê°™ë‹¤");
 		}
 		
-//		# ÀÌÇ×¿¬»êÀÚ
+//		# ì´í•­ì—°ì‚°ì
 		float pi = 3.141592f;
 		float sPi = (int)(pi*100);	//314.0
 		System.out.println(sPi);
@@ -61,74 +61,72 @@ public class OperatorTest {
 		int price2=price/1000;
 		System.out.println(price2);
 		int price3=price/1000*1000;
-		System.out.println(price3); //Àı»ç
+		System.out.println(price3); //ì ˆì‚¬
 		
-		float sPi2 = Math.round(pi); //¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®¿¡¼­ ¹İ¿Ã¸²
+		float sPi2 = Math.round(pi); //ì†Œìˆ˜ì  ì²«ì§¸ìë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼
 		System.out.println(sPi2);
 		float sPi3 = Math.round(pi*100)/100f; 
 		System.out.println(sPi3);
 	
 		
-//		#Áõ°¡ °¨¼Ò ¿¬»ê
+//		#ì¦ê°€ ê°ì†Œ ì—°ì‚°
 		int numm1=7;
 		int numm2, numm3;
 		
 		numm2 = ++numm1;	//8
 		numm3 = --numm1;	//7
-		System.out.println("¾Õ="+numm2);
-		System.out.println("¾Õ="+numm3);
+		System.out.println("ì•="+numm2);
+		System.out.println("ì•="+numm3);
 		
 		int nummm1=7;
 		int nummm2, nummm3;
 		
 		nummm2 = nummm1++;
 		nummm3 = nummm1--;
-		System.out.println("µÚ="+nummm2);
-		System.out.println("µÚ="+nummm3);
+		System.out.println("ë’¤="+nummm2);
+		System.out.println("ë’¤="+nummm3);
 	
 		
 		int i=5;
 		int j=5;  
-		System.out.println(i++);  	//Ãâ·Â: 5 i= 6
-		System.out.println(++j); 	//Ãâ·Â: 6 j=6
+		System.out.println(i++);  	//ì¶œë ¥: 5 i= 6
+		System.out.println(++j); 	//ì¶œë ¥: 6 j=6
 		System.out.println("i = " + i + ", j = " +j); //i = 6, j = 6
 		
-//		#¹®ÀÚ¿­Ã³¸® : string Å¬·¡½º ÀÌ¿ë -> °´Ã¼ »ı¼º -> Å¬·¡½º°¡ °¡Áö´Â º¯¼ö¿Í ¸Ş¼­µå¸¦ ¸Ş¸ğ¸®¿¡ ·Îµå
+//		#ë¬¸ìì—´ì²˜ë¦¬ : string í´ë˜ìŠ¤ ì´ìš© -> ê°ì²´ ìƒì„± -> í´ë˜ìŠ¤ê°€ ê°€ì§€ëŠ” ë³€ìˆ˜ì™€ ë©”ì„œë“œë¥¼ ë©”ëª¨ë¦¬ì— ë¡œë“œ
 		
-		//ÂüÁ¶º¯¼ö : °´Ã¼ÀÇ ¸Ş¸ğ¸® ÁÖ¼Ò°ªÀ» ÀúÀå
-		String str = null;	//null -> ÂüÁ¶º¯¼ö°¡ °´Ã¼ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ°í ÀÖÁö ¾Ê´Â´Ù.
+		//ì°¸ì¡°ë³€ìˆ˜ : ê°ì²´ì˜ ë©”ëª¨ë¦¬ ì£¼ì†Œê°’ì„ ì €ì¥
+		String str = null;	//null -> ì°¸ì¡°ë³€ìˆ˜ê°€ ê°ì²´ì˜ ì£¼ì†Œê°’ì„ ì €ì¥í•˜ê³  ìˆì§€ ì•ŠëŠ”ë‹¤.
 		
-		str = "abc"; // "" °ø¹é ¹®ÀÚ¿­À» ÀÌ¿ëÇÑ °´Ã¼¸¦ »ı¼ºÇÏ°í ÁÖ¼Ò°ªÀ» ¹İÈ¯ÇÔ
+		str = "abc"; // "" ê³µë°± ë¬¸ìì—´ì„ ì´ìš©í•œ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì£¼ì†Œê°’ì„ ë°˜í™˜í•¨
 		
-		System.out.println(str.toString()); //¹®ÀÚ¿­À» ¹İÈ¯ÇØÁØ´Ù. 
-		System.out.println(str.equals("abc")); //¹®ÀÚ¿­ ºñ±³
-		System.out.println(str.equals("¤·"));
+		System.out.println(str.toString()); //ë¬¸ìì—´ì„ ë°˜í™˜í•´ì¤€ë‹¤. 
+		System.out.println(str.equals("abc")); //ë¬¸ìì—´ ë¹„êµ
+		System.out.println(str.equals("ã…‡"));
 		
 		if(str != null && !str.equals("")) {
-			System.out.println(str.charAt(1)); // 0~3 -1 => 0,1,2¸¸ °¡´É
+			System.out.println(str.charAt(1)); // 0~3 -1 => 0,1,2ë§Œ ê°€ëŠ¥
 		}
 		int num=120; 
 		if(num>0) {
 			if((num%2)==0) { 
-				System.out.println("¾ç¼öÀÌ¸é¼­ Â¦¼ö");
+				System.out.println("ì–‘ìˆ˜ì´ë©´ì„œ ì§ìˆ˜");
 			}
 		}
-
-//		# Á¶°Ç¹®°ú ¹İº¹¹®		
+//		# ì¡°ê±´ë¬¸ê³¼ ë°˜ë³µë¬¸		
 		int num11=50;
 		int num22=100;  
-		int big, diff; //Å«¼ö, µÎ ¼öÀÇ Â÷ÀÌ
+		int big, diff; //í°ìˆ˜, ë‘ ìˆ˜ì˜ ì°¨ì´
 		big = (num1>num2)? num1:num2;   
 		System.out.println(big); 
 		diff = (num1>num2)? num1-num2: num2-num1; 
 		System.out.println(diff);  
-
-//		# »ïÇ× ¿¬»êÀÚ ÀÌ¿ë	
+//		# ì‚¼í•­ ì—°ì‚°ì ì´ìš©	
 		big = num11>num22? num11:num22;
 		diff = num11>num22? num11-num22: num22-num11;
-		System.out.println("Å«¼ö:"+big+" ,Å«¼ö¿Í ÀÛÀº¼öÀÇ Â÷ÀÌ´Â"+diff+" ÀÔ´Ï´Ù.");
+		System.out.println("í°ìˆ˜:"+big+" ,í°ìˆ˜ì™€ ì‘ì€ìˆ˜ì˜ ì°¨ì´ëŠ”"+diff+" ì…ë‹ˆë‹¤.");
 		
-//		#if else¸¦ »ç¿ëÇÏ´Â ÇüÅÂ.
+//		#if elseë¥¼ ì‚¬ìš©í•˜ëŠ” í˜•íƒœ.
 		if(num11>num22) {
 			big = num11;
 			diff = num11 - num22;
@@ -136,13 +134,13 @@ public class OperatorTest {
 			big = num22;
 			diff = num22 - num11;
 		}
-		System.out.println("Å«¼ö:"+big+" ,Å«¼ö¿Í ÀÛÀº¼öÀÇ Â÷ÀÌ´Â"+diff+" ÀÔ´Ï´Ù.");
+		System.out.println("í°ìˆ˜:"+big+" ,í°ìˆ˜ì™€ ì‘ì€ìˆ˜ì˜ ì°¨ì´ëŠ”"+diff+" ì…ë‹ˆë‹¤.");
 		System.out.println("------------");
 //		#switch
 		
 		int n=0;
 		
-		System.out.println("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä\n 1.ÀÔ·Â 2.º¸±â 3.¼öÁ¤ 4.»èÁ¦");
+		System.out.println("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”\n 1.ì…ë ¥ 2.ë³´ê¸° 3.ìˆ˜ì • 4.ì‚­ì œ");
 		
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
@@ -150,19 +148,19 @@ public class OperatorTest {
 		
 		switch (n) {
 			case 1:
-				System.out.println("ÀÔ·Â ÇÕ´Ï´Ù.");
+				System.out.println("ì…ë ¥ í•©ë‹ˆë‹¤.");
 				System.out.println("simple JAVA");
 				break;
 			case 2:
-				System.out.println("µ¥ÀÌÅÍ¸¦ ¿­¶÷ÇÕ´Ï´Ù.");
+				System.out.println("ë°ì´í„°ë¥¼ ì—´ëŒí•©ë‹ˆë‹¤.");
 				System.out.println("Funny JAVA");
 				break;
 			case 3:
-				System.out.println("Á¤º¸¸¦ ¼öÁ¤ÇÕ´Ï´Ù.");
+				System.out.println("ì •ë³´ë¥¼ ìˆ˜ì •í•©ë‹ˆë‹¤.");
 				System.out.println("Fantastic JAVA");
 				break;
 			case 4:
-				System.out.println("µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÕ´Ï´Ù.");
+				System.out.println("ë°ì´í„°ë¥¼ ì‚­ì œí•©ë‹ˆë‹¤.");
 				break;
 						
 		/*
@@ -172,35 +170,35 @@ public class OperatorTest {
 		
 //		}
 		
-/*		¿¹Á¦1)
+/*		ì˜ˆì œ1)
 		int i=5;
 		int j=0; 
 		j = i++;	    
-		System.out.println("j=i++; ½ÇÇà ÈÄ, i=" + i +", j="+ j);  //Áõ°¡ ÀÌÀü °ª ´ëÀÔ
-		// °á°ú¸¦ ºñ±³ÇÏ±â À§ÇØ, i¿Í jÀÇ °ªÀ» ´Ù½Ã 5¿Í 0À¸·Î º¯°æ  
+		System.out.println("j=i++; ì‹¤í–‰ í›„, i=" + i +", j="+ j);  //ì¦ê°€ ì´ì „ ê°’ ëŒ€ì…
+		// ê²°ê³¼ë¥¼ ë¹„êµí•˜ê¸° ìœ„í•´, iì™€ jì˜ ê°’ì„ ë‹¤ì‹œ 5ì™€ 0ìœ¼ë¡œ ë³€ê²½  
 		i=5;                  
 		j=0;
 		j = ++i;   
-		System.out.println("j=++i; ½ÇÇà ÈÄ, i=" + i +", j="+ j); //Áõ°¡ ÀÌÈÄ °ª ´ëÀÔ
+		System.out.println("j=++i; ì‹¤í–‰ í›„, i=" + i +", j="+ j); //ì¦ê°€ ì´í›„ ê°’ ëŒ€ì…
 /**/
 		
-//		¿¹Á¦2
+//		ì˜ˆì œ2
 /*		int num1 = 7;
 		int num2, num3; 
-		num2 = ++num1; //Áõ°¡ ÀÌÈÄ °ª ´ëÀÔ
-		num3 = --num1; //°¨¼Ò ÀÌÈÄ °ª ´ëÀÔ
+		num2 = ++num1; //ì¦ê°€ ì´í›„ ê°’ ëŒ€ì…
+		num3 = --num1; //ê°ì†Œ ì´í›„ ê°’ ëŒ€ì…
 		System.out.println(num1);
 		System.out.println(num2);
 		System.out.println(num3);  
 /**/
-//		¿¹Á¦3
+//		ì˜ˆì œ3
 /*		 int i=5, j=5; 
-		 System.out.println(i++); //Áõ°¡ ÀÌÀü °ª ´ëÀÔ
-		 System.out.println(++j); //Áõ°¡ ÀÌÈÄ °ª ´ëÀÔ
+		 System.out.println(i++); //ì¦ê°€ ì´ì „ ê°’ ëŒ€ì…
+		 System.out.println(++j); //ì¦ê°€ ì´í›„ ê°’ ëŒ€ì…
 		 System.out.println("i = " + i + ", j = " +j); 
  */
 /**/		
-//		¿¹Á¦4
+//		ì˜ˆì œ4
 	//	int i = -10; 
 /*		i = +i;  
 		System.out.println(i); //-10 	+1*-10
@@ -208,79 +206,228 @@ public class OperatorTest {
 		i = -i; 
 		System.out.println(i); //+10	-1*-10
 */
-//		¿¹Á¦5
+//		ì˜ˆì œ5
 /*		byte b = 10;    
 		System.out.println("b = " + b ); 
-		System.out.println("~b = " + ~b); // ~b´Â -(b+1)
+		System.out.println("~b = " + ~b); // ~bëŠ” -(b+1)
 		System.out.println("~b+1 = " + (~b+1)); //-(b+1)+1
 */
-//		¿¹Á¦6		
+//		ì˜ˆì œ6		
 /*		  byte b = 10; 
 //		  byte result = ~b;				//*************************
 		  byte result = (byte)~b; 	
 		  System.out.println("b = " + b ); 
 		  System.out.println("~b = " + result );
 */
-//		 ¿¹Á¦7
+//		 ì˜ˆì œ7
 /*		 boolean power = false; 
 		 System.out.println(power); 
 		 power = !power;     
-		 // powerÀÇ °ªÀÌ false¿¡¼­ true·Î ¹Ù²ï´Ù.
+		 // powerì˜ ê°’ì´ falseì—ì„œ trueë¡œ ë°”ë€ë‹¤.
 		 System.out.println(power);
 		 power = !power;    
-		 // powerÀÇ °ªÀÌ true¿¡¼­ false·Î ¹Ù²ï´Ù.   
+		 // powerì˜ ê°’ì´ trueì—ì„œ falseë¡œ ë°”ë€ë‹¤.   
 		 System.out.println(power);
 	*/	 
-//		¿¹Á¦8
+//		ì˜ˆì œ8
 /*		 byte a = 10;    
 		 byte b = 20;           
-	//	 byte c = a + b;  //int+int°¡ µÈ´Ù. ********************
+	//	 byte c = a + b;  //int+intê°€ ëœë‹¤. ********************
 		 byte c = (byte)(a+b);          
 		 System.out.println(c); 
 */		 
 		 
-//		¿¹Á¦9
+//		ì˜ˆì œ9
 /*		 byte a = 10;  
 		 byte b = 30;  
 		 byte c = (byte)(a * b);   
-		 System.out.println(c); //byte°ª ÃÊ°ú -128~127
+		 System.out.println(c); //byteê°’ ì´ˆê³¼ -128~127
 */
 /*		 
-//		¿¹Á¦10
+//		ì˜ˆì œ10
 		 int a = 1000000;
-		 // 1,000,000   1¹é¸¸         
+		 // 1,000,000   1ë°±ë§Œ         
 		 int b = 2000000;
-		 // 2,000,000   2¹é¸¸ 
+		 // 2,000,000   2ë°±ë§Œ 
 		 long c = a*b;
-		 // 2,000,000,000,000 int * int °è»ê¹üÀ§ ÃÊ°ú (long)a*b
+		 // 2,000,000,000,000 int * int ê³„ì‚°ë²”ìœ„ ì´ˆê³¼ (long)a*b
 		 System.out.println(c);	
 */		 
-//		¿¹Á¦11		 
+//		ì˜ˆì œ11		 
 /*		 long a = 1000000 * 1000000;
-		 long b = 1000000 * 1000000L;  // longÇü ¸®ÅÍ·²         
-		 System.out.println(a); //int * int °è»ê¹üÀ§ ÃÊ°ú     
+		 long b = 1000000 * 1000000L;  // longí˜• ë¦¬í„°ëŸ´         
+		 System.out.println(a); //int * int ê³„ì‚°ë²”ìœ„ ì´ˆê³¼     
 		 System.out.println(b); //int * long = long
 */		 
-//		¿¹Á¦12
+//		ì˜ˆì œ12
 /*		 
-		 int a = 1000000 * 100000 / 1000000; //-->¼øÀ¸·Î °è»êµÇ´Âµ¥ ¹é¸¸*¹é¸¸ÀÌ ¹üÀ§ÃÊ°ú
-		 int b = 1000000 / 100000 * 1000000; //³ª´©±âºÎÅÍ °è»êµÇ¾î °è»ê¹üÀ§ ¾ÈÃÊ°ú
+		 int a = 1000000 * 100000 / 1000000; //-->ìˆœìœ¼ë¡œ ê³„ì‚°ë˜ëŠ”ë° ë°±ë§Œ*ë°±ë§Œì´ ë²”ìœ„ì´ˆê³¼
+		 int b = 1000000 / 100000 * 1000000; //ë‚˜ëˆ„ê¸°ë¶€í„° ê³„ì‚°ë˜ì–´ ê³„ì‚°ë²”ìœ„ ì•ˆì´ˆê³¼
 		 System.out.println(a);            
 		 System.out.println(b); 
-
 */	 
-//		¿¹Á¦13
-         char c1 = 'a';  // c1¿¡´Â ¹®ÀÚ 'a'ÀÇ ÄÚµå °ªÀÎ 97ÀÌ ÀúÀåµÈ´Ù.    
-         char c2 = c1;  // c1¿¡ ÀúÀåµÇ¾î ÀÖ´Â °ªÀÌ c2¿¡ ÀúÀåµÈ´Ù.   
-         char c3 =' ';   // c3¸¦ °ø¹éÀ¸·Î ÃÊ±âÈ­ ÇÑ´Ù.        
-         int  i = c1 + 1;       // 'a'+1 ¡æ 97+1 ¡æ 98    
-         c3 = (char)(c1 + 1);          
-         c2++;     
-         c2++;      
+//		ì˜ˆì œ13
+/*       char c1 = 'a';  // c1ì—ëŠ” ë¬¸ì 'a'ì˜ ì½”ë“œ ê°’ì¸ 97ì´ ì €ì¥ëœë‹¤.    
+         char c2 = c1;  // c1ì— ì €ì¥ë˜ì–´ ìˆëŠ” ê°’ì´ c2ì— ì €ì¥ëœë‹¤.   
+         char c3 =' ';   // c3ë¥¼ ê³µë°±ìœ¼ë¡œ ì´ˆê¸°í™” í•œë‹¤.        
+         int  i = c1 + 1;       // 'a'+1 â†’ 97+1 â†’ 98    
+         c3 = (char)(c1 + 1);   // 'a'ëŠ” 97, 97+1=98 98ì€ 'b'       
+         c2++;     //a+1=b
+         c2++;     //a+2=c
          System.out.println("i=" + i);    
          System.out.println("c2=" + c2);       
-         System.out.println("c3=" + c3); 
+         System.out.println("c3=" + c3); //b
+ */
+		
+//		ì˜ˆì œ14
+/*		
+		char c1 = 'a';
+		char c2 = c1 + 1;
+		char c2 = 'a'+1; // ë¼ì¸ 6 : ì»´íŒŒì¼ ì—ëŸ¬ ì—†ìŒ.
+		System.out.println(c2);
+*/		
+		
+/*		
+		ë¬¸ì œ1.
+		int í˜• ë³€ìˆ˜ num1, num2, num3ê°€ ê°ê° 10,20,30 ìœ¼ë¡œ ì´ˆê¸°í™” ë˜ì–´ ìˆë‹¤.
+		ë‹¤ìŒë¬¸ì¥ì„ ì‹¤í–‰í•˜ë©´ ê°ê° ë³€ìˆ˜ì—ëŠ” ì–´ë– í•œ ê°’ì´ ì €ì¥ë˜ê² ëŠ”ê°€?
+		num1=num2=num3 ;
+		 í™•ì¸ í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ê³ , ê·¸ ê²°ê³¼ì— ëŒ€í•´ ì„¤ëª….
+
+		int num1 = 10;
+		int num2 = 20;
+		int num3 = 30;
+		num1=num2=num3;
+		System.out.println(num1);
+		//num3->num2->num1
+		
+		ë¬¸ì œ2.
+		ìˆ˜í•™ì‹ {{(25x5)+(36-4)}-72}/5 ì˜ ê³„ì‚°ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±.
+		double num4 = (((25*5)+(36-4))-72)/5;
+		System.out.println(num4);
+		
+		ë¬¸ì œ3.
+		3+6, 3+6+9, 3+6+9+12 ì˜ ì—°ì‚°ì„ í•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±.
+		ë‹¨. ë§ì…ˆ ì—°ì‚°ì˜ íšŸìˆ˜ ìµœì†Œí™”
+	
+		int sum=0;
+		for(int i=1;i<5;i++) {
+			sum = sum+(i*3);
+			System.out.println(sum);
+		}
+		
+		
+		ë¬¸ì œ4.
+		a= {{(25+5)+(36/4)}-72}*5, b= {{(25x5)+(36-4)}-71}/4, c=(128/4)*2 ì¼ ë•Œ
+		a>b>c ê°€ ì°¸ì´ë©´ true ì•„ë‹ˆë©´ falseë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±     
+
+		int a = (((25+5)+(36/4))-72)*5;
+		int b = (((25*5)+(36-4))-71)/4;
+		int c = (128/4)*2;
+		if (a>b && b>c) {
+			System.out.println(true);
+		}
+		else {
+			System.out.println(false);
+		}
+
+//		ë¬¸ì œ1 - if í•œê°œ ì¨
+		int num=120;
+		if(num>0) {
+		if((num%2)==0)
+		System.out.println("ì–‘ìˆ˜ì´ë©´ì„œ ì§ìˆ˜");
+		}
+	 if(num>0 && num%2==0) {
+		 System.out.println("ì–‘ìˆ˜ì´ë©´ì„œ ì§ìˆ˜");
+	 }
+
+		ë¬¸ì œ2 - ë‹¤ìŒê³¼ ê°™ì´ ì¶œë ¥ì´ ì´ë£¨ì–´ì§€ë„ë¡ ì‘ì„±í•´ë³´ì.
+	 num < 0 ì´ë¼ë©´ â€œ0 ë¯¸ë§Œâ€ ì¶œë ¥ 
+	 0 â‰¤ num <100 ì´ë¼ë©´ â€œ0ì´ìƒ 100 ë¯¸ë§Œâ€œ ì¶œë ¥
+	 100 â‰¤ num < 200 ì´ë¼ë©´ â€œ100ì´ìƒ 200 ë¯¸ë§Œâ€œ ì¶œë ¥
+	 200 â‰¤ num < 300 ì´ë¼ë©´ â€œ200ì´ìƒ 300 ë¯¸ë§Œâ€œ ì¶œë ¥
+	 300 â‰¤ num ì´ë¼ë©´ â€œ300ì´ìƒ â€œ ì¶œë ¥
+	 
+	Scanner scan = new Scanner(System.in);
+	int num;
+	System.out.print("ìˆ«ì = ");
+	num = scan.nextInt();
+	 if (num<0) {
+		 System.out.println("0 ë¯¸ë§Œ");
+	 }
+	 else if (num>=0 && num<100 ) {
+		 System.out.println("0ì´ìƒ 100ë¯¸ë§Œ");
+	 }
+	 else if (num>=100 && num<200) {
+		 System.out.println("100ì´ìƒ 200ë¯¸ë§Œ");
+	 }
+	 else if (num>=200 && num<300) {
+		 System.out.println("200ì´ìƒ 300ë¯¸ë§Œ");
+	 }
+	 else if (num>=300) {
+		 System.out.println("300ì´ìƒ");
+	 }
+	 
+		//ë¬¸ì œ3- if ë¬¸ìœ¼ë¡œ ê³ ì³ë¼
+		int num1=50, num2=100;
+		int big, diff;
+		big = (num1>num2)? num1:num2;
+		System.out.println(big);
+		diff = (num1>num2)? num1-num2: num2-num1;
+		System.out.println(diff);	
+		
+		if (num1>num2) {
+			big = num1;
+			diff = num1-num2;
+		}
+		else if  (num1<num2) {
+			big = num2;
+			diff = num2-num1;
+		}
+		System.out.println(big);
+		System.out.println(diff);
+
+//		ë¬¸ì œ4
+		int n=3;
+		switch(n) {
+		case 1:
+		System.out.println("Simple Java");
+		break;
+		case 2:
+		System.out.println("Funny Java");
+		break;
+		case 3:
+		System.out.println("Fantastic Java");
+		break;
+		default:
+		System.out.println("The best programming language");
+		}
+		System.out.println("Do you like coffee?");
+//		ë¬¸ì œ4- switchë¬¸ì„ if else ë¬¸ìœ¼ë¡œ
+		
+		if (n==1) {
+			System.out.println("Simple Java");
+		}
+		else if (n==2) {
+			System.out.println("Funny Java");
+		}
+		else if (n==3) {
+			System.out.println("Fantastic Java");
+		}
+		else {
+			System.out.println("The best programming language");
+		}
+		System.out.println("Do you like coffee?");
+//		ë¬¸ì œ5- ë¬¸ì œ2ë¥¼ switchë¡œ
+		 num < 0 ì´ë¼ë©´ â€œ0 ë¯¸ë§Œâ€ ì¶œë ¥ 
+		 0 â‰¤ num <100 ì´ë¼ë©´ â€œ0ì´ìƒ 100 ë¯¸ë§Œâ€œ ì¶œë ¥
+		 100 â‰¤ num < 200 ì´ë¼ë©´ â€œ100ì´ìƒ 200 ë¯¸ë§Œâ€œ ì¶œë ¥
+		 200 â‰¤ num < 300 ì´ë¼ë©´ â€œ200ì´ìƒ 300 ë¯¸ë§Œâ€œ ì¶œë ¥
+		 300 â‰¤ num ì´ë¼ë©´ â€œ300ì´ìƒ â€œ ì¶œë ¥
 		 
+		 switchëŠ” ë¶€ë“±í˜¸ ì‚¬ìš© ë¶ˆê°€
+*/
+		
 		 
 }
 }
