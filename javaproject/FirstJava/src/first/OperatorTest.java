@@ -1,10 +1,7 @@
 package first;
-import java.lang.Math;
-import java.util.Scanner;
 public class OperatorTest {
-
 	public static void main(String[] args) {
-/*
+		/*
 		int num1 = 10;
 		int num2 = 8;
 		
@@ -113,7 +110,6 @@ public class OperatorTest {
 				System.out.println("양수이면서 짝수");
 			}
 		}
-
 //		# 조건문과 반복문		
 		int num11=50;
 		int num22=100;  
@@ -122,7 +118,6 @@ public class OperatorTest {
 		System.out.println(big); 
 		diff = (num1>num2)? num1-num2: num2-num1; 
 		System.out.println(diff);  
-
 //		# 삼항 연산자 이용	
 		big = num11>num22? num11:num22;
 		diff = num11>num22? num11-num22: num22-num11;
@@ -267,21 +262,166 @@ public class OperatorTest {
 		 int b = 1000000 / 100000 * 1000000; //나누기부터 계산되어 계산범위 안초과
 		 System.out.println(a);            
 		 System.out.println(b); 
-
 */	 
 //		예제13
-         char c1 = 'a';  // c1에는 문자 'a'의 코드 값인 97이 저장된다.    
+/*       char c1 = 'a';  // c1에는 문자 'a'의 코드 값인 97이 저장된다.    
          char c2 = c1;  // c1에 저장되어 있는 값이 c2에 저장된다.   
          char c3 =' ';   // c3를 공백으로 초기화 한다.        
          int  i = c1 + 1;       // 'a'+1 → 97+1 → 98    
-         c3 = (char)(c1 + 1);          
-         c2++;     
-         c2++;      
+         c3 = (char)(c1 + 1);   // 'a'는 97, 97+1=98 98은 'b'       
+         c2++;     //a+1=b
+         c2++;     //a+2=c
          System.out.println("i=" + i);    
          System.out.println("c2=" + c2);       
-         System.out.println("c3=" + c3); 
+         System.out.println("c3=" + c3); //b
+ */
+		
+//		예제14
+/*		
+		char c1 = 'a';
+		char c2 = c1 + 1;
+		char c2 = 'a'+1; // 라인 6 : 컴파일 에러 없음.
+		System.out.println(c2);
+*/		
+		
+/*		
+		문제1.
+		int 형 변수 num1, num2, num3가 각각 10,20,30 으로 초기화 되어 있다.
+		다음문장을 실행하면 각각 변수에는 어떠한 값이 저장되겠는가?
+		num1=num2=num3 ;
+		 확인 하는 코드를 작성하고, 그 결과에 대해 설명.
+		int num1 = 10;
+		int num2 = 20;
+		int num3 = 30;
+		num1=num2=num3;
+		System.out.println(num1);
+		//num3->num2->num1
+		
+		문제2.
+		수학식 {{(25x5)+(36-4)}-72}/5 의 계산결과를 출력하는 프로그램 작성.
+		double num4 = (((25*5)+(36-4))-72)/5;
+		System.out.println(num4);
+		
+		문제3.
+		3+6, 3+6+9, 3+6+9+12 의 연산을 하는 프로그램 작성.
+		단. 덧셈 연산의 횟수 최소화
+	
+		int sum=3;
+		for(int i=2;i<5;i++) {
+			sum = sum+(i*3);
+			System.out.println(sum);
+		}
+		
+		
+		
+		문제4.
+		a= {{(25+5)+(36/4)}-72}*5, b= {{(25x5)+(36-4)}-71}/4, c=(128/4)*2 일 때
+		a>b>c 가 참이면 true 아니면 false를 출력하는 프로그램 작성     
+		int a = (((25+5)+(36/4))-72)*5;
+		int b = (((25*5)+(36-4))-71)/4;
+		int c = (128/4)*2;
+		if (a>b && b>c) {
+			System.out.println(true);
+		}
+		else {
+			System.out.println(false);
+		}
+//		문제1 - if 한개 써
+		int num=120;
+		if(num>0) {
+		if((num%2)==0)
+		System.out.println("양수이면서 짝수");
+		}
+	 if(num>0 && num%2==0) {
+		 System.out.println("양수이면서 짝수");
+	 }
+		문제2 - 다음과 같이 출력이 이루어지도록 작성해보자.
+	 num < 0 이라면 “0 미만” 출력 
+	 0 ≤ num <100 이라면 “0이상 100 미만“ 출력
+	 100 ≤ num < 200 이라면 “100이상 200 미만“ 출력
+	 200 ≤ num < 300 이라면 “200이상 300 미만“ 출력
+	 300 ≤ num 이라면 “300이상 “ 출력
+	 
+	Scanner scan = new Scanner(System.in);
+	int num;
+	System.out.print("숫자 = ");
+	num = scan.nextInt();
+	 if (num<0) {
+		 System.out.println("0 미만");
+	 }
+	 else if (num>=0 && num<100 ) {
+		 System.out.println("0이상 100미만");
+	 }
+	 else if (num>=100 && num<200) {
+		 System.out.println("100이상 200미만");
+	 }
+	 else if (num>=200 && num<300) {
+		 System.out.println("200이상 300미만");
+	 }
+	 else if (num>=300) {
+		 System.out.println("300이상");
+	 }
+	 
+		//문제3- if 문으로 고쳐라
+		int num1=50, num2=100;
+		int big, diff;
+		big = (num1>num2)? num1:num2;
+		System.out.println(big);
+		diff = (num1>num2)? num1-num2: num2-num1;
+		System.out.println(diff);	
+		
+		if (num1>num2) {
+			big = num1;
+			diff = num1-num2;
+		}
+		else if  (num1<num2) {
+			big = num2;
+			diff = num2-num1;
+		}
+		System.out.println(big);
+		System.out.println(diff);
+//		문제4
+		int n=3;
+		switch(n) {
+		case 1:
+		System.out.println("Simple Java");
+		break;
+		case 2:
+		System.out.println("Funny Java");
+		break;
+		case 3:
+		System.out.println("Fantastic Java");
+		break;
+		default:
+		System.out.println("The best programming language");
+		}
+		System.out.println("Do you like coffee?");
+//		문제4- switch문을 if else 문으로
+		
+		if (n==1) {
+			System.out.println("Simple Java");
+		}
+		else if (n==2) {
+			System.out.println("Funny Java");
+		}
+		else if (n==3) {
+			System.out.println("Fantastic Java");
+		}
+		else {
+			System.out.println("The best programming language");
+		}
+		System.out.println("Do you like coffee?");
+//		문제5- 문제2를 switch로
+		 num < 0 이라면 “0 미만” 출력 
+		 0 ≤ num <100 이라면 “0이상 100 미만“ 출력
+		 100 ≤ num < 200 이라면 “100이상 200 미만“ 출력
+		 200 ≤ num < 300 이라면 “200이상 300 미만“ 출력
+		 300 ≤ num 이라면 “300이상 “ 출력
 		 
+		 switch는 부등호 사용 불가
+*/
 		 
+
 }
 }
 	
