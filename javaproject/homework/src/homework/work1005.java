@@ -36,6 +36,10 @@ public class work1005 {
 
 		//System.out.println("result="+result);
 		
-	
+	//[과제] 연산자 추가 문제
+		int fa=100;
+		float celcius = (int)(5/9f*(fa-32)*(100+0.5)/100f);
+		
+		
 	}
 }
