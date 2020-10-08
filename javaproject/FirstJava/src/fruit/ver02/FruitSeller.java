@@ -1,15 +1,42 @@
-package fruit;
+package fruit.ver02;
+
+/*
+ 	파일이름 : FruitSeller.java
+ 	설명 : 사과 장수의 객체를 정의
+ 	작성일시 : 2020.10.08
+ 	수정내용 : fruit.FruitSeller.java를 기반으로 생성자를 추가
+  
+ */
 
 public class FruitSeller {
 //클래스에는 변수와 메서드를 정의
 //성격이 비슷한 변수 메서드를 정의
 	
-	
+	//수정:2020.10.08
+	//	  변수의 초기화를 생성자에서 처리, 변수 선언시에 초기화 코드 삭제
 	//변수: 인스턴스 변수, 멤버 변수
 	//int applePrice = 1000; 		//사과의 가격
-	final int APPLE_PRICE = 1000; 	//사과의 가격, 변경 불가-상수선언
-	int numOfApple = 20;			//사과의 보유 개수
-	int myMoney = 0;				//수익 금액
+	final int APPLE_PRICE; 	//사과의 가격, 변경 불가-상수선언
+	int numOfApple;			//사과의 보유 개수
+	int myMoney;				//수익 금액
+	
+	//2020.10.08 생성자 추가
+	FruitSeller() {
+		this(0,20,1000); //푸룻셀러 호출 컨트롤키+마우스
+	}
+	
+	FruitSeller(int money, int num, int price) {
+		APPLE_PRICE=price;
+		numOfApple=num;
+		myMoney=money;
+	}
+	
+	FruitSeller(FruitSeller seller){ //생성자
+		//APPLE_PRICE = seller.APPLE_PRICE;
+		//numOfApple = seller.numOfApple;
+		//myMoney = seller.myMoney;
+		this(seller.myMoney,seller.numOfApple, seller.APPLE_PRICE);
+	}
 	
 	//기능: 판매, 정산 출력
 	//판매 메서드 : 
