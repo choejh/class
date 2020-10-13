@@ -9,6 +9,7 @@ public class Number {
 		System.out.println("생성자가 실행되었습니다.");
 	}
 	
+
 	Number(){
 		num = 10;
 		System.out.println("생성자가 실행되었습니다.");

@@ -25,7 +25,8 @@ public class StringTest {
 			System.out.println("다른 인스턴스를 참조");
 		}
 	
-		System.out.println(str1.equals(str4));
+		System.out.println(str1.equals(str4)); //문자열 비교할땐 무조건 equals사용
+		
 		
 	}
 
