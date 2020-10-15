@@ -20,6 +20,12 @@ public class FruitSalesMain1 {
 		//FruitBuyer 타입의 참조변수 선언과 초기화
 		FruitBuyer buyer = new FruitBuyer(10000,0);
 		
+		//이렇게 하면 안된다구10.15 -> 원본에서 변수를 private 처리함
+//		seller.myMoney +=500;
+//		buyer.myMoney -=500;
+//		seller.numOfApple -=20;
+//		buyer.numOfapple =+ 20;
+		
 		//사과를 구매 : 2000 지불
 		buyer.buyApple(seller, 3000);
 		

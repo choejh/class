@@ -17,8 +17,8 @@ public class FruitSeller {
 	//변수: 인스턴스 변수, 멤버 변수
 	//int applePrice = 1000; 		//사과의 가격
 	final int APPLE_PRICE; 	//사과의 가격, 변경 불가-상수선언
-	int numOfApple;			//사과의 보유 개수
-	int myMoney;				//수익 금액
+	private int numOfApple;			//사과의 보유 개수
+	private int myMoney;				//수익 금액
 	
 	//2020.10.08 생성자 추가
 	FruitSeller() {

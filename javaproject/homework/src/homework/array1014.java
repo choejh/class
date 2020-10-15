@@ -7,9 +7,16 @@ public class array1014 {
 	int cnt;
 	int min=arr[0];
 	int max=arr[0];
-	//메소드 만들기
-	//최대값 반환
 	
+	//데이터를 입력받기
+	Scanner sc = new Scanner(System.in);
+	void insertData() {
+		System.out.println("저장할 정수를 입력하시오.");
+		int data = sc.nextInt();
+	}
+	
+	
+	//최대값 반환
 	int maxiValue() {
 		for(int i=0; i<arr.length;i++) {
 			if (max>arr[i]) {
@@ -20,7 +27,6 @@ public class array1014 {
 	}
 	
 	//최소값 반환
-	
 	int miniValue() {
 		for(int i=0; i<arr.length;i++) {
 			if (min<arr[i]) {
@@ -32,10 +38,7 @@ public class array1014 {
 	
 
 	
-//	static void arrData (int data){
-//	Scanner sc = new Scanner(System.in);
-//	int data = sc.nextInt();
-//	}
+
 	
 	
 	public static void main(String[] args) {
