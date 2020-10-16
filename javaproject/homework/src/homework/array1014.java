@@ -1,83 +1,119 @@
 package homework;
 import java.util.Scanner;
 public class array1014 {
+	
+public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-	
+
+	//문제1	
 	//변수선언
-	int arr[]= new int[100]; //길이가 100인 배열 
-	int cnt;	//저장된 갯수
-	int min=arr[0];
-	int max=arr[0];
+	int arr[] = new int[10];
 	
+	//입력받기
+	System.out.println("정수 10개를 입력하시오");
+	for(int i=0;i<10;i++) {
+		System.out.println("정수를 입력하세요");
+		arr[i] = sc.nextInt();
+	}	
 	
-	//데이터를 입력받기
-	void insertData() {
-		System.out.println("저장할 정수를 입력하시오.");
-		int data = sc.nextInt();
-		arr[cnt]=data;
-		cnt++;
-	}
-	
-	
-	//최대값 반환
-	int maxiValue() {
-		for(int i=0; i<arr.length;i++) {
-			if (max>arr[i]) {
-				max = arr[i];
-			}
-		}
-		return max;
-	}
-	
-	//최소값 반환
-	int miniValue() {
-		for(int i=0; i<arr.length;i++) {
-			if (min<arr[i]) {
-				min = arr[i];
-			}
-		}
-		return min;
-	}
-	
-	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-	
-//		문제 1.
-//		int형 1차원 배열을 매개변수로 전달 받아서 배열에 저장된 최대값,
-//		그리고 최소값을 구해서 반환하는 메소드를 다음의 형태로 각각 정의.
-//		public static int miniValue(int[] arr) { . . . . } // 최소값 반환
-//		public static int maxValue(int[] arr) { . . . . } // 최대값 반환
-//		위의 두 매소드는 인자로 전달되는 배열의 길이에 상관없이 동작하도록 정의.
-//		두 매소드 실행을 확인인하기 위한 main 메소드 정의.
-//		int형 배열에 채워질 정수는 프로그램 사용자로부터 입력 받고, 배열의 길이는
-//		임의로 결정
+	System.out.println(maxValue(arr));
+	System.out.println(minValue(arr));
 
-	 array1014 a = new array1014();
-		
-		
-		while(true) {
+//문제2
+	int add=7;
+	int[][] arr2 = {
+			{1,2,3},
+			{4,5,6},
+			{7,8,9}
 			
-			System.out.println("정수를 배열에 입력하시겠습니까?");
-			System.out.println("1.그렇다. 2.아니다.");
-			System.out.println("========================");
-			
-			char insertMenu = sc.nextLine().charAt(0);
-			
-			switch(insertMenu) {
-				case '1':
-					a.insertData();
-					break;
-				case '2':
-					System.out.println("프로그램을 종료합니다.");
-					System.exit(0);
-					break;
-			}
+	};
+	
+	
+	addOneDArr(arr2, add);
+	
+	for(int i =0; i<arr2.length;i++) {
+		for(int j=0; j <arr2[i].length; j++){
+			System.out.println(arr2[i][j]);
+		}
+		System.out.println();
+	}
+
+	int[][] arr3 = {
+			{7,8,9},
+			{1,2,3},
+			{4,5,6}
+	};
 		
 	}
-	//	System.out.println(a.arr);
-		
+	
+	
 
+
+//문제 1)
+
+//최대값	
+public static int maxValue(int[] arr) {
+	int max = arr[0];
+	for(int i=1;i<arr.length;i++) {
+		if( max<arr[i]) {
+			max=arr[i];
+		}
+	}
+	
+	return max;
 }
 	
+//최소값
+public static int minValue(int[] arr) {
+	int min = arr[0];
+	for(int i=1;i<arr.length;i++) {
+		if(min>arr[i]) {
+			min=arr[i];
+		}
+	}
+	return min;
+}	
+	
+
+//문제2)
+
+public static void addOneDArr(int[][] arr, int add) {
+	for(int i=0;i<arr.length;i++) {
+		for(int j=0;j<arr.length;j++) {
+			arr[i][j] = arr[i][j] + add;
+
+		}
+	}
 }
+	
+	
+////문제3)
+//public static void changeArr (int[][] arr) {
+//	int temp= new int[1];
+//		temp[0]=arr[0];
+//	for(int i=1;i<arr.length-1;i++ ) {
+//		if(arr.length-1=i) {
+//			arr[i]=temp[0];
+//		}
+//		arr[i]=arr[i+1];
+//	}
+//	}
+//	i[0] 1 --> temp로
+//	i[1] 2 --> 
+//	i[2] 4
+//	i[3] 6
+//	arr.length= 4
+//	마지막 i는 = 3
+//	
+//	[0] = [1]
+//	[1] = 2
+//	3 = 4
+//	
+//	
+	
+	
+}
+
+
+
+
