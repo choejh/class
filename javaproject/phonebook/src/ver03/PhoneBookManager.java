@@ -120,50 +120,53 @@ public class PhoneBookManager {
 	}
 	
 	
-	//정보 삭제
-	//삭제하고자 하는 이름을 사용자로부터 받는다 ->
-	//배열에서 이름으로 검색해서 index를 찾는다
-	//배열에서 찾은 index의 참조값을 삭제: 인스턴스는 참조하는 참조변수가 없으면 삭제된다
-	//참조값의 null을 입력하거나, 다른 주소값을 입력 -> 이전에 있던 참조값은 없어진다.
-	//삭제 대상의 index 부터 왼쪽으로 값을 시프트 처리
-	//cnt-1
-	
-	void deleteMember() {
-		
-		System.out.println("정보 삭제를 진행합니다.");
-		System.out.println("삭제 하고자 하는 정보의 이름을 입력해주세요.");
-		String name = Util.sc.nextLine();
-		
-		//이름을 요소 index 검색
-				int index = -1;
-				
-				//검색: index를 찾는다.
-//				for(int i=0; i<=cnt;i++) {
-//					if(phoneBook[i].name.equals(name)) {
-//						index=i;
-//						break;
-//					}
+	// 정보 삭제
+		// 삭제하고자 하는 이름을 사용자로부터 받는다 ->
+		// 배열에서 이름으로 검색해서 index를 찾는다
+		// 배열에서 찾은 index의 참조값을 삭제 : 인스턴스는 참조하는 참조변수가 없으면 삭제 된다
+		// 참조값에 null을 입력하거나, 다른 주소값을 입력 -> 이전에 있던 참조값은 없어진다.
+		// 삭제 대상의 index 부터 왼쪽으로 값을 시프트 처리
+		// cnt-1
+		void deleteMember() {
+
+			if (cnt == 0) {
+				System.out.println("등록된 정보가 없습니다.");
+				return;
+			}
+
+			System.out.println("정보 삭제를 진행합니다.");
+			System.out.println("삭제 하고자 하는 정보의 이름을 입력해주세요.");
+			String name = Util.sc.nextLine();
+
+			// 이름을 요소 index 검색
+			int index = searchIndex(name);
+
+			// 검색 : index를 찾는다.
+//			for (int i = 0; i < cnt; i++) {
+//				if (phoneBook[i].name.equals(name)) {
+//					index = i;
+//					break;
 //				}
-//				
-				if(index<0) {
-					System.out.println("삭제하고자 하는 정보가 존재하지 않습니다.");
+//			}
+
+			if (index < 0) {
+				System.out.println("삭제 하고자 하는 정보가 존재하지 않습니다.");
+			} else {
+				// 삭제 처리 : 삭제해야하는 index 부터 왼쪽으로 시프트 처리
+				// index = 3;
+				// phoneBook[3] = phoneBook[4]
+				// phoneBook[4] = phoneBook[5]
+				for (int i = index; i < cnt - 1; i++) {
+					phoneBook[i] = phoneBook[i + 1];
 				}
-				else {
-					// 삭제 처리 : 삭제해야하는 index부터 왼쪽으로 시프트 처리 
-					// index = 3;
-					// phoneBook[3] = phoneBook[4]
-					// phoneBook[4] = phoneBook[5]
-					for(int i=index; i<cnt-1; i++) {
-						phoneBook[i]=phoneBook[i+1];
-					}
-				
-					cnt--;
-					
-					System.out.println("정보를 삭제했습니다.");
-				}
-		
-		
-	}
+
+				cnt--;
+
+				System.out.println("정보를 삭제 했습니다.");
+			}
+
+		}
+
 	
 	//전체 정보 출력
 	void displayAll() {
