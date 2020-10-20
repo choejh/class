@@ -14,7 +14,7 @@ public class productMain {
 		
 		
 		// 제품 인스턴스를 생성
-		Tv tv = new Tv(200);
+		Tv tv = new Tv(700);
 		Computer com = new Computer(180);
 		Audio audio = new Audio(150);
 		

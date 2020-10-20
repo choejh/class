@@ -12,7 +12,7 @@ public class Product {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() { //객체가 가지고 잇는 정보를 문자로 만들어 리턴
 		return "Product [price=" + price + ", bonusPoint=" + bonusPoint + "]";
 	}
 
