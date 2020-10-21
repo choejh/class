@@ -50,7 +50,7 @@ class PointTwo {
 	}
 
 	@Override
-	public String toString() { //투스트링이 뭐여?
+	public String toString() { 
 		return "[xPos=" + xPos + ", yPos=" + yPos + "]";
 	}
 }
