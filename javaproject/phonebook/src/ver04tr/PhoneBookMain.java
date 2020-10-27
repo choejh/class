@@ -17,7 +17,7 @@ public class PhoneBookMain {
 			System.out.println("5. EXIT");
 			
 			System.out.println("\n>>");
-			int select = Util.sc.nextInt();
+			int select = Util.SC.nextInt();
 			if(!(select>0 && select<6)) {
 				System.out.println("메뉴의 선택이 올바르지 않습니다.\n 다시 선택해주세요.");
 				continue;

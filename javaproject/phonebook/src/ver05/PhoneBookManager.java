@@ -51,9 +51,9 @@ public class PhoneBookManager {
 		System.out.println(Menu.COM+". 회사");
 		System.out.println(Menu.CAFE+". 동호회");
 		
-		int select = Util.sc.nextInt();
+		int select = Util.SC.nextInt();
 		
-		Util.sc.nextLine();
+		Util.SC.nextLine();
 		if(!(select>0 && select<4)) {
 			System.out.println("메뉴 선택이 올바르지 않습니다.");
 		System.out.println("초기 메뉴로 돌아갑니다..");
@@ -62,13 +62,13 @@ public class PhoneBookManager {
 	
 		System.out.println("정보 입력을 시작합니다.");
 		System.out.println("이름 >> ");
-		String name = Util.sc.nextLine();
+		String name = Util.SC.nextLine();
 		System.out.println("전화번호 >> ");
-		String PNum = Util.sc.nextLine();
+		String PNum = Util.SC.nextLine();
 		System.out.println("주소 >> ");
-		String addr = Util.sc.nextLine();
+		String addr = Util.SC.nextLine();
 		System.out.println("이메일>> ");
-		String email = Util.sc.nextLine();
+		String email = Util.SC.nextLine();
 		
 		switch(select) {
 //		case 1:
@@ -79,24 +79,24 @@ public class PhoneBookManager {
 			//추가 정보 받고 -> 인스턴스 생성 -> 배열에 저장
 			//전공, 학년
 			System.out.println("전공>> ");
-			String major = Util.sc.nextLine();    
+			String major = Util.SC.nextLine();    
 			System.out.println("학년>> ");
-			int grade = Util.sc.nextInt();
+			int grade = Util.SC.nextInt();
 			addInfor(new univPhoneInfo(name, PNum, addr, email, major, grade));
 			break;
 		case Menu.COM:
 			//추가 정보 받고 -> 인스턴스 생성 -> 배열에 저장
 			System.out.println("회사이름>> ");
-			String company = Util.sc.nextLine();
+			String company = Util.SC.nextLine();
 			addInfor(new CompanyPhoneInfo(name, PNum, addr, email, company)); //위에서 받은거 
 			break;
 		case Menu.CAFE:
 			//추가 정보 받고 -> 인스턴스 생성 -> 배열에 저장
 			//동호회 이름, 닉네임
 			System.out.println("동호회 이름>> ");
-			String cafeName = Util.sc.nextLine();
+			String cafeName = Util.SC.nextLine();
 			System.out.println("닉네임>>");
-			String nickName = Util.sc.nextLine();
+			String nickName = Util.SC.nextLine();
 			addInfor(new cafePhoneInfo(name, PNum, addr, email, cafeName, nickName));
 			break;
 		}
@@ -120,10 +120,10 @@ public class PhoneBookManager {
 
 	// 해당 index의 참조변수로 정보 출력 : 사용자가 입력한 이름으로 검색
 	public void searchInfor() {
-		Util.sc.nextLine();
+		Util.SC.nextLine();
 		System.out.println("검색하실 이름을 입력해주세요.");
 		
-		String name = Util.sc.nextLine();
+		String name = Util.SC.nextLine();
 		
 		int index = searchIndex(name);
 		if(index<0) {
@@ -141,9 +141,9 @@ public class PhoneBookManager {
 			System.out.println("입력된 정보가 없습니다.");
 			return;
 		}
-		Util.sc.nextLine();
+		Util.SC.nextLine();
 		System.out.println("삭제하고자하는 정보의 이름을 입력해주세요.");
-		String name = Util.sc.nextLine();
+		String name = Util.SC.nextLine();
 		///////////////////////////////////////////////////////여기하나 놓침
 		int index = searchIndex(name);
 		if(index<0) {

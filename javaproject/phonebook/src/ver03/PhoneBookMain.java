@@ -23,7 +23,7 @@ public class PhoneBookMain {
 		System.out.println("5. 프로그램 종료");
 		System.out.println("========================");
 		
-		char insertMenu = Util.sc.nextLine().charAt(0);
+		char insertMenu = Util.SC.nextLine().charAt(0);
 		
 		switch(insertMenu) {
 			case '1':

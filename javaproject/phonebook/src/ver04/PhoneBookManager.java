@@ -87,7 +87,7 @@ void addPhone(int choice) {
 			//찾고자 하는 이름을 받는다.
 			System.out.println("정보 검색을 시작합니다.");
 			System.out.println("찾고자 하는 이름을 입력해주세요. : ");
-			String name = Util.sc.nextLine();
+			String name = Util.SC.nextLine();
 			
 			//이름을 요소 index 검색
 			int index = searchIndex(name);
@@ -130,7 +130,7 @@ void addPhone(int choice) {
 
 			System.out.println("정보 삭제를 진행합니다.");
 			System.out.println("삭제 하고자 하는 정보의 이름을 입력해주세요.");
-			String name = Util.sc.nextLine();
+			String name = Util.SC.nextLine();
 
 			// 이름을 요소 index 검색
 			int index = searchIndex(name);
