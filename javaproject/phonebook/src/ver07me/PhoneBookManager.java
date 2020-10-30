@@ -227,7 +227,7 @@ public class PhoneBookManager implements Util {
 	//프로그램으로 파일의 저장 데이터 로드
 		void load() {
 			File file = new File("phonebookme.ser");
-			if(file.exists()==false){
+			if(!file.exists()){
 		System.out.println("파일이 존재하지 않습니다.");
 		return;
 	}
@@ -239,17 +239,10 @@ public class PhoneBookManager implements Util {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("데이터 로드 과정에서 오류 발생!");
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("데이터 로드 과정에서 오류 발생!");
 		}
-
-	
-	
-      catch (FileNotFoundException e) {
-		e.printStackTrace();
-		System.out.println("데이터 로드 과정에서 오류 발생!");
-	} catch (IOException e) {
-		e.printStackTrace();
-		System.out.println("데이터 로드 과정에서 오류 발생!");
-	}
 	
 	
 	

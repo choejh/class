@@ -25,7 +25,6 @@ public class PhoneBookMain {
 			System.out.println("메뉴 선택이 올바르지 않습니다.");
 			continue;
 		}
-		
 		switch(select){
 			case Menu.INSERT:
 				manager.insertInfo();

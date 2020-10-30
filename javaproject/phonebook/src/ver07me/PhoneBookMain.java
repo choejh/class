@@ -29,7 +29,7 @@ public class PhoneBookMain implements Util {
 				select = SC.nextInt();
 			
 				if(!(select>0 && select<7)) {
-					//System.out.println("메뉴의 선택이 옳바르지 않습니다.\n다시 선택해주세요.");
+					//System.out.println("메뉴의 선택이 올바르지 않습니다.\n다시 선택해주세요.");
 					//Exception e = new Exception("잘못된 메뉴 입력");
 					BadInputException e = new BadInputException(String.valueOf(select));
 					throw e;
@@ -59,6 +59,7 @@ public class PhoneBookMain implements Util {
 				break;
 			case Menu.SAVE:
 				manager.save();
+				break;
 			case Menu.EXIT:
 				System.out.println("프로그램을 종료합니다. ");
 				return;
