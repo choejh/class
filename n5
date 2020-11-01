@@ -1,0 +1,91 @@
+package minigame;
+
+import java.util.Scanner;
+
+public class Level3CCGame implements CCGame{
+	public static boolean check = false;
+	@Override
+	public void explainGame() {
+		int select=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("안녕하세요? 스피드 계산 게임에 입장하신 것을 환영합니다.");
+		System.out.println("레벨 3의 게임설명은 다음과 같습니다.");
+		System.out.println("메인메뉴로 돌아간다-1 시작한다-2");
+		select= sc.nextInt();
+		switch(select) {
+		case 1 : return;
+		case 2 : System.out.println("게임을 시작합니다.");
+				playGame();
+		}
+	}
+
+	@Override
+	public void playGame() {
+		CountDownThread cdt = new CountDownThread();
+		cdt.start();
+		
+		Scanner sc = new Scanner(System.in);
+		int answer=0;
+		int win = 0;
+		int lose = 0;
+		
+		System.out.println("15초안에 입력을 해주세요");
+	
+		for(int i=0; i<5; i++) {
+	
+			int A=(int)(Math.random()*10);
+			int B=(int)(Math.random()*10);
+			int C=(int)(Math.random()*10);
+			System.out.println((i+1)+"번째 문제 입니다.");
+		
+		
+			if(i==3) {
+			System.out.println(10*A+B+"+"+C+"=");
+			}
+			else if (i%2==0) {
+				System.out.println(10*A+B+"x"+C+"=");
+			}
+			else if (i!=3&&i%2!=0){ 
+				System.out.println(10*A+B+"-"+C+"=");
+			}
+			answer = sc.nextInt();
+			
+			
+			if(i==3&&(10*A+B+C)==answer) {
+				System.out.println("정답입니다~!");
+				win+=1;
+				System.out.println("정답을 맞춘 횟수 = "+win);
+			}
+			else if (i%2==0&&((10*A+B)*C)==answer) {
+				System.out.println("정답입니다~!");
+				win+=1;
+				System.out.println("정답을 맞춘 횟수 = "+win);
+			}
+			else if (i%2!=0&&i!=3&&(10*A+B-C)==answer) {
+				System.out.println("정답입니다~!");
+				win+=1;
+				System.out.println("정답을 맞춘 횟수 = "+win);
+			}
+			
+			else {System.out.println("틀렸습니다~!");
+				lose+=1;
+				System.out.println("틀린 횟수="+lose);
+			}
+			
+	}
+		
+		if(lose>=3) {
+			System.out.println("당신은 탈락하셨습니다.");
+			check=true;
+		}
+		if(win>=3) {
+			System.out.println("Clear~!\n\n");
+			check=true;
+		}
+
+
+
+	
+
+}
+}
