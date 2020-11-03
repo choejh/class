@@ -72,19 +72,25 @@ public class Lv3Start {
 			
 			o.gameOverCheck=true;
 			
-			if(lose+win<5) {
-				System.out.println("시간초과~~");
+			if (lose + win < 5) {
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				System.out.println("\n\n\t시간초과로 탈락하셨습니다\t\n\n");
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
 			}
-			
-			if(lose>=3) {
-				System.out.println("당신은 탈락하셨습니다.");
-			
-			}
-			
-			if(win>=3) {System.out.println("Clear~!\n\n");}
-		
-		}
+			if (lose >= 2) {
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				System.out.println("\n\n\t2개 이상 틀렸네요 당신은 탈락입니다\t\n\n");
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
 
-			
+			}
+			if (win >= 4) {
+				System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+				System.out.println("\n\t\t  ~Clear~\t\t");
+				System.out.println("\t스피드 계산 게임 LV3을 통과하셨습니다.\t");
+				System.out.println("\t    ~당신은 계산의 달인입니다~\t\n");
+				System.out.println("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\n");
+			}
+
 		}
+	}
 
