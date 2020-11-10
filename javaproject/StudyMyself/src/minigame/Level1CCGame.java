@@ -11,7 +11,7 @@ public class Level1CCGame  {
 		int select=0;
 		while(true) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("========= 안녕하세요? 스피드 계산 게임에 입장하신 것을 환영합니다. =========");
+		System.out.println("========= 안녕하세요? 연습스피드 계산 게임에 입장하신 것을 환영합니다. =========");
 		System.out.println("                Easy레벨의 게임설명은 다음과 같습니다.              ");
 		System.out.println("              Easy레벨은 두 자릿수와 한 자릿 수를 덧셈합니다.         ");
 		System.out.println("         예를 들어, 12+3= 라는 문제가 나오면 '15'를 입력하시면 됩니다.    ");
@@ -34,9 +34,9 @@ public class Level1CCGame  {
 		switch(select) {
 			case 1 : return;
 			case 2 : System.out.println("게임을 시작합니다.");
-				Over o = new Over();
-				Lv1Start lv1 = new Lv1Start(o);
-				CountDownThread cdt = new CountDownThread(o);
+//				Over o = new Over();
+				Lv1Start lv1 = new Lv1Start();
+				CountDownThread cdt = new CountDownThread();
 				cdt.start();
 				lv1.playGame();
 			

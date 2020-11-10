@@ -32,9 +32,9 @@ public class Level2CCGame {
 		switch(select) {
 			case 1 : return;
 			case 2 : System.out.println("게임을 시작합니다.");
-				Over o = new Over();
-				Lv2Start lv2 = new Lv2Start(o);
-				CountDownThread cdt = new CountDownThread(o);
+//				Over o = new Over();
+//				Lv2Start lv2 = new Lv2Start(o);
+//				CountDownThread cdt = new CountDownThread(o);
 				cdt.start();
 				lv2.playGame();
 			

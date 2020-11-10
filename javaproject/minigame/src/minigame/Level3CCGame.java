@@ -30,12 +30,11 @@ public class Level3CCGame {
 			}
 		
 		switch(select) {
-		case 1 : return;
-		case 2 : System.out.println("게임을 시작합니다.");
+			case 1 : return;
+			case 2 : System.out.println("게임을 시작합니다.");
 				Over o = new Over();
 				Lv3Start lv3 = new Lv3Start(o);
-				CountDownThread cdt = null;
-				cdt = new CountDownThread(o);
+				CountDownThread cdt = new CountDownThread(o);
 				cdt.start();
 				lv3.playGame();
 			
