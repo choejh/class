@@ -28,3 +28,8 @@ group by job
 order by avg(sal));
 
 --47. 각 부서의 최소 급여를 받는 사원의 이름, 급여, 부서번호를 표시하시오.
+
+select *
+from emp e, emp m
+where e.empno = m.empno
+order by m.deptno;
