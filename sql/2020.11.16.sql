@@ -106,13 +106,13 @@ insert into phoneinfo_basic (IDX, fr_name, fr_phonenumber)
 values (SEQ_PIBASIC_IDX.nextval,'손흥민','010-1111-9999');
 
 --회사정보 입력
-insert into phoneinfo_com(1,'토트넘',SEQ_PIBASIC_IDX.currval);
+insert into phoneinfo_com values(1,'토트넘',SEQ_PIBASIC_IDX.currval);
 
 --Read
---회사 치누
+--회사 친구
 select *
-from phoneinfo_basic bb,phoneinfo_com pc
-where pb.idx=pc.tr_ref
+from phoneinfo_basic pb,phoneinfo_com pc
+where pb.idx=pc.fr_ref
 and pb.fr_name ='손흥민';
 
 --update
@@ -121,7 +121,7 @@ set fr_c_company='레알'
 where idx=1;
 
 --delete
---자식테이블의 행부터 삽입
+--자식테이블의 행부터 삭제하고 부모 테이블 행 삭제
 
-delete from phoneinfo_com where fr_ref() 
-t
+delete from phoneinfo_com where fr_ref=8;
+delete from phoneinfo_basic where idx=8;
