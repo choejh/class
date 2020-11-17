@@ -122,7 +122,29 @@ having avg(saleprice)>(select avg(saleprice)from orders);
 --3. 마당서점에서 다음의 심화된 질문에 대해 SQL 문을 작성하시오.
 
 --(1) 박지성이 구매한 도서의 출판사와 같은 출판사에서 도서를 구매한 고객의 이름
+---박지성이 구매한 도서의 출판사
+select distinct b.publisher
+from customer c, book b,orders o
+where c.custid=o.custid 
+and b.bookid=o.bookid
+and c.name='박지성';
 
-
+select distinct c.name
+from customer c, book b,orders o
+where c.custid=o.custid 
+and b.bookid=o.bookid
+and b.publisher in(select distinct b.publisher
+from customer c, book b,orders o
+where c.custid=o.custid 
+and b.bookid=o.bookid
+and c.name='박지성')
+and c.name!='박지성';
 
 --(2) 두 개 이상의 서로 다른 출판사에서 도서를 구매한 고객의 이름
+---
+select c.name
+from customer c, book b,orders o
+where c.custid=o.custid 
+and b.bookid=o.bookid
+group by c.name
+having count(distinct b.publisher)>=2;
