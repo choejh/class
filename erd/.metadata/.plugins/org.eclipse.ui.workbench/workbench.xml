@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="8" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
-<window height="873" width="1054" x="83" y="91">
+<window height="967" width="1476" x="-11" y="47">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,12 +26,16 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="test.exerd" partName="test.exerd" path="C:/Users/bit/Documents/GitHub/class/erd/ERD_test/test.exerd" title="test.exerd" tooltip="ERD_test/test.exerd" workbook="DefaultEditorWorkbook">
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="test.exerd" partName="test.exerd" path="C:/Users/bit/Documents/GitHub/class/erd/ERD_test/test.exerd" title="test.exerd" tooltip="ERD_test/test.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ERD_test/test.exerd"/>
+</editor>
+<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="realestate.exerd" partName="realestate.exerd" path="C:/Users/bit/Documents/GitHub/class/erd/ERD_test/realestate.exerd" title="realestate.exerd" tooltip="ERD_test/realestate.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ERD_test/realestate.exerd"/>
 </editor>
 </editors>
 <views>
@@ -44,7 +48,7 @@
 <element path="/ERD_test"/>
 </expanded>
 <selection>
-<element path="/ERD_test"/>
+<element path="/ERD_test/realestate.exerd"/>
 </selection>
 </viewState>
 </view>
@@ -117,8 +121,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.18" ratioLeft="180" ratioRight="820" relationship="2" relative="leftFolder"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@f23c81" ratio="0.77926826" ratioLeft="639" ratioRight="181" relationship="2" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.13827434" ratioLeft="125" ratioRight="779" relationship="2" relative="leftFolder"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@f23c81" ratio="0.9004695" ratioLeft="959" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.tomato.exerd.ui.views.thumbnail" appearance="2" expanded="2">
 <page content="com.tomato.exerd.ui.views.thumbnail" label="썸네일"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -136,7 +140,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomFolder" ratio="0.6996904" ratioLeft="452" ratioRight="194" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottomFolder" ratio="0.7552795" ratioLeft="608" ratioRight="197" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.tomato.exerd.ui.views.domain" appearance="2" expanded="2">
 <page content="com.tomato.exerd.ui.views.domain" label="도메인"/>
 <page content="com.tomato.exerd.validate.ui.ValidateView" label="검토"/>
@@ -165,8 +169,34 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/ERD_test/test.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/ERD_test/realestate.exerd"/>
 </editors>
-<item active="true" historyLabel="test.exerd" index="0"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item historyLabel="realestate.exerd" index="1"/>
+<item historyLabel="test.exerd" index="0"/>
+<item active="true" historyLabel="realestate.exerd" index="1"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -184,6 +214,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="realestate.exerd" tooltip="ERD_test/realestate.exerd">
+<persistable path="/ERD_test/realestate.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="test.exerd" tooltip="ERD_test/test.exerd">
 <persistable path="/ERD_test/test.exerd"/>
 </file>

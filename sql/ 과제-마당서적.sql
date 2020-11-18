@@ -129,6 +129,7 @@ where c.custid=o.custid
 and b.bookid=o.bookid
 and c.name='박지성';
 
+
 select distinct c.name
 from customer c, book b,orders o
 where c.custid=o.custid 
