@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- HTML5 문서임을 정의 -->
+
+<html lang="ko"> 
+    <!-- html의 시작 작성하는 언어 정의-->
+    <head> <!-- html 문서의 정보를 정의-->
+        <title>First HTML5</title> <!-- 웹 문서의 제목-->
+        <meta charset="utf-8"> <!-- 문서의 속성 -->
+        <style>
+            h1 {
+                background-color: darkkhaki;
+                color:darkslategray
+            }
+            h2 {
+                background-color: antiquewhite;
+                color:darkslategray
+            }
+            div {
+                background-color: brown;
+            }
+            
+            p {
+                background-color: floralwhite;
+            }
+            span {
+                background-color: darksalmon;
+            }
+            
+    
+        </style> <!-- 웹 문서의 요소들의 스타일 정의 -->
+        <script>
+            //alert('안녕하세요');
+        </script> <!--자바스크립트 정의-->
+    </head>
+    <body>
+        <h3 id="top">INDEX</h3>
+        
+        <ol>
+            <li><a href="http://www.naver.com">naver</a></li>
+             <li><a href="http://192.168.0.35/">link</a></li>
+             <li><a href="#tag-1">Heading tag</a></li>
+             <li><a href="#tag-2">P tag</a></li>
+             <li><a href="#tag-3">br tag</a></li>
+             <li><a href="#tag-4">list tag</a></li>
+             <li><a href="#tag-5">table tag</a></li>
+             <li><a href="#tag-6">img tag</a></li>
+             <li><a href="#tag-7">공간분할 tag</a></li>
+        </ol>
+    
+        <hr>
+        
+        <h1>form tag </h1>
+        <form action="#" method="get">
+        
+        아이디 <input type="text" name="userid" value="value"><br>
+        이름 <input type="text" name="username" value="value"><br>
+        비밀번호 <input type="password" name="pw" value="value"><br>
+        파일 <input type="file" name="file"><br>    
+        ok?<input type="checkbox" name="ok"><br> 
+        A<input type="radio" name="choice" value="A">
+        B<input type="radio" name="choice" value="B"> 
+        C<input type="radio" name="choice" value="C"><br> 
+            
+        <input type="submit" value="서버로 전송"><br> 
+        </form>
+        
+        
+        
+        
+        
+        <hr>
+        
+        <h1 id="tag-7">공간 분할 tag</h1>
+        <!--block-->
+        <div>DIV</div>
+        <!--inline-->
+        <span>SPAN</span>
+        
+        <hr>
+        
+        <h1 id="tag-6">img tag</h1>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Daum_communication_logo.svg/1200px-Daum_communication_logo.svg.png" width="300">
+        
+        
+        <img src="3.jpg"
+            height="400" width="300"/>
+        <img src="a1.jpg">
+        <img src="4.jpg">
+        <img src="5.png" height="400">
+        <img src="images/2.jpg" height="400">
+        <img src="test" alt="이미지 파일입니다.">
+        
+        <hr>
+        
+        
+        <h1 id="tag-5"> Table tag</h1>
+           <table border="1">
+            <tr>
+                <th colspan="2">지역별 홍차</th>
+                <!--<td ></td>-->
+            </tr>
+        
+            <tr>
+                <th rowspan="3">중국</th>
+                <td >정산소종</td>
+            </tr>          
+               <tr>
+                <!--<td ></td>-->
+                <td >기문</td>
+            </tr>          
+               <tr>
+                <!--<td ></td>-->
+                <td >운남</td>
+            </tr>          
+               <tr>
+                <th rowspan="4">인도 및 스리랑카</th>
+                <td >아삼</td>
+            </tr>          
+               <tr>
+                <!--<td ></td>-->
+                <td >실론</td>
+            </tr>
+                 <tr>
+                <!--<td ></td>-->
+                <td >다질링</td>
+            </tr>
+                 <tr>
+                <!--<td ></td>-->
+                <td >닐기리</td>
+            </tr>
+        
+               
+               
+        
+        
+                <hr>
+        <table border="1">
+            <tr>
+                <td rowspan="2">1,2</td>
+                <td>1,2</td>    
+            </tr>
+            <tr>
+                <td>2,1</td>
+
+            </tr>
+        </table>
+        
+        
+        
+         <table border="1">
+            <tr>
+                <td colpsan="2">1,1</td>
+            </tr>
+        </table>
+                
+                
+        
+        
+        <table border="1">
+            <tr>
+                <th>tag</th>
+                <th>설명</th>    
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td>테이블을 생성해주는 태그</td>    
+            </tr>
+            <tr>
+                <td>thead</td>
+                <td>테이블의 머리글</td>    
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>테이블의 본문</td>    
+            </tr>        
+            <tr>
+                <td>tfoot</td>
+                <td>설명</td>    
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>테이블의 행을 생성</td>    
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>표의 각 열의 라벨을 표현</td>    
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>행에 포함되는 열을 생성</td>    
+            </tr>
+        </table>
+        <hr>
+        
+        <h1 id="tag-4"> LIST tag </h1>
+        <!-- 순서 없는 리스트 -->
+        <ul>
+            <li> 카카오 </li>
+            <li> 네이버 </li>
+            <li> 페이스북 </li>
+        </ul>
+        
+        <hr>
+        <!--순서 있는 리스트-->
+        <ol>
+            <li> 카카오 </li>
+            <li> 네이버 </li>
+            <li> 페이스북 </li>
+        </ol>
+        
+        
+        
+        
+        
+        
+        <h3 id="tag-3">홍차</h3>
+        <hr>
+        <h4>개요</h4>
+        <p>
+        홍차(紅,茶)는 차잎 내부의 성분이 자체에 들어있는 효소에 산화되어[2] 붉은 빛을 띠는 차를 뜻한다. 녹차나 보이차와 같이 효소의 작용을 중지시키는 쇄청(曬靑, 햇볕에 쬐어 말림) 과정을 거치지 않기 때문에 잎 자체의 효소로 산화가 된 것이다.
+        </p>
+        <h4>등급</h4>
+        <p>
+        </p>
+        -브로큰 페코 수숑
+        <br><br>
+        브로큰 오렌지 페코 패닝
+        
+        
+        <hr>
+                
+        
+        
+        
+        <h1 id="tag-2">문단 tag</h1>
+        <h2>
+        노량진 임용고시학원 최소 26명 확진…214명 밀접접촉(종합)
+        </h2>
+        <p>
+        (서울=연합뉴스) 오주현 기자 = 서울 동작구 노량진의 대형 임용고시 학원에서 신종 코로나바이러스 감염증(코로나19) 확진자가 최소 26명 발생해 중등 임용고시 시험을 코앞에 둔 학원가에 비상이 걸렸다.
+        </p>
+        <p>
+        20일 동작구에 따르면 노량진 '임용단기' 학원 수강생 2명이 지난 18∼19일 코로나19 확진 판정을 받은 데 이어 이날 다른 수강생과 직원 등 24명이 추가 확진 판정을 받았다.
+        </p>
+        
+        <hr>
+        
+        <h1 id="tag-1"> heading</h1>
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5>This is heading 5</h5>
+        <h6>This is heading 6</h6>
+        
+       <a href="#top">맨위로</a>
+    </body>
+    
+    
+</html>
