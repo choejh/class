@@ -1,0 +1,18 @@
+<br> 줄바꿈
+<p> 단락바꿈
+
+<ul>리스트 표현
+ <li>카카오</li>
+</ul>
+
+이미지 <img src="경로" width="" height="">
+jpg,gif,png가능
+
+공간 분할
+<div> 처음~끝 block
+<span> 컨텐츠 영역 block
+
+사용자 입력 tag
+<form>
+ <input>
+</form>
