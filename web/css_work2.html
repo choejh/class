@@ -4,101 +4,74 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>make</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;700&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-color: #F2F2F2
-        }
-          *{
-            margin:0;
-            padding:0;
-        }
-        h{
-            font-size: 10px;
-        }
-    div{
-            text-align: center;
-            line-height: 20px;
-        }
-        #navi2,#navi2>li {
-            padding: 6px 10px ;
-            list-style: none;
-        }
-        
-        #navi2>li {
-         float: left;
-            }
-        a:link{
-            color:black;
-            text-decoration: none;
-        }
-        a:visited { color: black; text-decoration: none;}
-        
-    #header {
-            width:1000px;
-            height: 130px;
-            font-family:'Noto Serif KR', serif;
-            text-align: left;
-            }
-        #headf{
-            font-size:200%;
-            font-weight: bolder;
-            line-height: 70px;
-            margin-left : 40px;
-        }
-        #headf2{
-            font-size:120%;
-            margin-left : 50px;
-        }
-    #navi {
-            width: 1000px;
-            height: 50px;
-        }
-    #content {
-            width: 800px;
-            height:500px;
-        float:left;
-        }   
-    #aside {
-            width: 200px;
-            height: 700px;
-        float:left;
-        }    
-    #footer {
-            width:1000px;
-            height: 50px;
-        clear:both;
-        }   
-    #wrap {
-         border : 10px solid darkolivegreen;
-         width: 1010px;
-         height: 1000px;
-                    margin : 30px;
-            margin-left : 400px;
-        }    
-    </style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!-- 기본 설정 -->
+    <!-- 외부에서 default.css를 로드-->
+    <link rel="stylesheet" href="default.css">
 </head>
 
 <body>
-    <div id="wrap">
-    <div id="header">
-        <h id="headf">HTML Example Preview</h><br>
-        <h id="headf2">한빛아카데미</h>
-       
-    </div>
-     <hr>
-    <div id="navi">
-        <ul id="navi2">
+    <div id="main_wrap">
+    <header>
+        <h1>HTML Example Preview</h1>
+        <h4>한빛아카데미</h4>
+    </header>
+    <nav>
+        <ul>
         <li><a href="#">HTML5</a></li>
         <li><a href="#">CSS3</a></li>
         <li><a href="#">JavaScript</a></li>
         </ul>
+        <form>
+            <input type="text">
+            <input type="button" value="검색">
+        </form>
+    </nav>
+        
+        
+        
+    <div id="contents_wrap">
+    <div id="content">
+        <section>
+            <article>
+                <h1>HTML이란 무엇인가?</h1>
+                <p> 2020.11.25</p>
+                <img src="4.jpg">
+                <p>
+    하이퍼텍스트 마크업 언어(HyperText Markup Language, HTML, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)는 웹 페이지를 위한 지배적인 마크업 언어다. HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. 그리고 이미지와 객체를 내장하고 대화형 양식을 생성하는 데 사용될 수 있다. HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 "태그"로 되어있는 HTML 요소 형태로 작성한다. HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트와 본문과 그 밖의 항목의 외관과 배치를 정의하는 CSS 같은 스크립트를 포함하거나 불러올 수 있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여 CSS의 사용을 권장한다.
+                </p>
+                <hr>
+            </article>
+            <article>
+                <h1>HTML 개발자</h1>
+                <p> 2020.11.25</p>
+                <img src="5.png">
+                <p>
+ 1980년, 유럽 입자 물리 연구소(CERN)의 계약자였었던 물리학자 팀 버너스리가 HTML의 원형인 인콰이어를 제안하였다. 인콰이어는 CERN의 연구원들이 문서를 이용하고 공유하기 위한 체계였다. 1989년에 팀 버너스리는 인터넷 기반 하이퍼텍스트 체계를 제안하는 메모를 작성했다.[2] 버너스 리는 1990년 말에 HTML을 명시하고, 브라우저와 서버 소프트웨어를 작성했다. 그 해에 버너스리와 CERN 데이터 시스템 엔지니어 로버트 카일리아우와 함께 CERN측에 자금 지원을 요청하였지만, 이 프로젝트는 CERN으로부터 정식으로 채택 받지 못했다. 버너스리의 개인적인 기록[3] 에 1990년부터 "하이퍼텍스트가 사용되는 여러 분야의 일부"를 열거했고 백과사전을 그 목록의 첫 번째로 두었다.
+                </p>
+            </article>  
+        </section>
+    </div>   
+        <aside>
+            <h4>카테고리</h4>
+             <ul>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+            </ul>
+            <h4>최근 글</h4>
+             <ul>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+            </ul>
+        </aside>
+        
         </div>
-    <hr>    
-    <div id="content">content</div>
-    <div id="aside">aside</div>
-    <div id="footer">footer</div>
+            
+
+    <div id="footer"><hr>Copyright © meiyou. All rights reserved</div>
     </div>
 </body>
 </html>
