@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+<script>
+var num = prompt("숫자를 입력해주세요"); 
+var rnum = Number(num);    
+if (rnum>0){alert("양수입니다.");}
+    else if (rnum==0){alert("0입니다.");}
+    else if (rnum<0){alert("음수입니다.");}
+    else if(!rnum){         /*이거를 잘 봐둬~*/
+        alert("숫자만 확인이 가능합니다.");
+    }
+    
+var num1= prompt("숫자를 입력해주세요");
+var rnum1 = Number(num1);
+if (rnum1%2==0){alert("짝수입니다.");}
+    else if(!rnum1){
+        alert("숫자만 확인이 가능합니다.");
+    }
+    else {alert("홀수입니다.");} 
+    
+</script>    
+</body>
+</html>

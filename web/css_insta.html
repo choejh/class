@@ -20,6 +20,7 @@
         margin: 0px auto;
         padding: 0px;        
     } 
+
     header{
         width: 1000px;
         height: 80px; 
@@ -27,10 +28,28 @@
         background-color: white;
         position: fixed;
     }
+    header>form{    
+    float:none;
+    margin-left: 400px;
+    margin-top:20px;
+    }
+ 
+    header>form>input[type=text] {
+    width:200px;
+    height: 33px;
+    border-radius: 5px 5px 5px 5px;
+    border-color: cadetblue;
+    background-color: aliceblue;
+    }    
+        
+        
     #img1{
-    width: 103px;
-    height: 29px;    
+    width: 125px;
+    height: 35px;    
     background-image:url(insta.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
    margin : 25px;
    margin-left : 10px;
     }    
@@ -41,8 +60,10 @@
 <body>
 <div id="main_wrap">
     <header>
-    <div id="img1">
-    </div>
+        <div id="img1"></div>
+        <form>
+        <input type="text">
+        </form>
     </header>
     <nav>
     박나래 사진 게시물 팔로워 부분    
