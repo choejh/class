@@ -1,0 +1,116 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet"');
+*{
+    padding:0;
+    margin:0;
+}
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/*프로그램 타이틀 선택*/
+h1.header {
+    margin: 20px;
+}
+hr {
+    border:0;
+    border-top: 1px solid #CCC;
+}
+
+h2.title {
+    margin:20px 40px;
+}
+
+#regform {
+    margin:10px 40px;
+}
+#regform>table {
+    width: 600px;
+}
+#regform>table td {
+    width: 100px;
+    padding:10px;
+    vertical-align: top;
+}
+
+#regform>table input{
+    width:90%;
+    padding: 5px;
+}
+#regform>table label{
+    display: block;
+}
+#regform>table input[type=submit]{
+    width:100px;
+    height:50px;
+    background-color: blanchedalmond;
+    border: 1px solid #aaa;
+    
+}
+div.msg{
+    color:red;
+    display:none;
+}
+table.table {
+        margin:10px 40px;
+    width:600px;
+    border-collapse: collapse;
+}
+table.table td,table.table th {
+    border: 1px solid #aaa;
+    background-color: #fff;
+    padding:10px;
+    text-align: center;
+}
+
+div.edit_div{
+    width:300px;
+    padding:10px;
+    background-color: azure;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    
+    box-shadow: 5px 5px 10px #ddd;
+    position: absolute;
+    
+    top:50px;
+    left: 100px;
+/*
+    margin: 0 auto;
+*/
+}
+
+div.edit.div>div.edit_for_header{
+    overflow: hidden;
+    padding:5px;
+}
+div.edit.div>div.edit_for_header>h2{
+    float: left;
+}
+
+div.edit.div>div.edit_for_header>a{
+    float: right;
+}
+
+editform{
+    margin: 10px;
+}
+
+#editform>table {
+    width:100%;
+}
+
+#editform>table td {
+    padding: 5px;
+    text-align: center;
+}
+
+#editform input[type=submit]{
+    background-color: rebeccapurple;
+    padding:10px;
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:darkcyan;
+    border:1px solid darkgreen;
+}
