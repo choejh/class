@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배너 이미지</title>
+    <!--jQuery 라이브러리 로드-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            setInterval(function(){
+            $('img').first().appendTo('div')    
+            },2000);
+            
+        });
+    </script>
+    
+    <style>
+        
+        div{
+            width: 250px;
+            height: 250px;
+            border: 10px solid #ddd; 
+            overflow: hidden; /*영역을 벗어나는 애들 감추기*/
+        }
+        
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div>
+    <img src="../3.jpg">
+    <img src="../4.jpg">
+    <img src="../images/2.jpg">
+    </div>
+</body>
+</html>
