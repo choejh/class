@@ -1,0 +1,46 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet');
+*{
+    font-family: 'Noto Serif KR', serif;
+}
+#regform>table td {
+    width: 100px;
+    padding:10px;
+    vertical-align: top;
+}
+#regform>table input[type=button] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#regform>table input[type=text] {
+    width: 150px;
+    padding: 3px;
+}
+#regform>table label{
+    display: block;
+}
+#regform>table label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#listtable{
+    margin:10px 30px;
+    width:600px;
+    border-collapse: collapse;     
+}
+#listtable>thead *{
+    border: 1px solid #aaa;
+    background-color: sandybrown;
+    padding:10px;
+    text-align: center;
+}
+#listtable>tbody td,th{
+    border: 1px solid #aaa;
+    background-color: #fff;
+    padding:10px;
+    text-align: center;
+}
+

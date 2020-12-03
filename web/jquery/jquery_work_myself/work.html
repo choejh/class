@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Manager</title>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
+    
+    <link rel="stylesheet" href="default.css">    
+    <script>
+$(document).ready(function(){
+        var id='';
+        var pw='';
+        var name='';
+        var insertTr = '';
+    $('#button1').click(function(){
+        var ok= confirm('등록하시겠습니까?');
+            if(ok){
+            //등록할 회원 정보 값 담기
+                id=$('#id').val();
+                pw=$('#pw').val();
+                name=$('#name').val();
+
+            
+
+            insertTr += '<tr>';
+            insertTr += '<td>'+($('#listtable tbody tr').length+1)+'</td>';   
+            insertTr += '<td>'+id+'</td>';
+            insertTr += '<td>'+pw+'</td>';
+            insertTr += '<td>'+name+'</td>';
+            insertTr +=
+            '<td>'+'<a>삭제</a>'+'<a> 수정</a>'+'</td>';
+            insertTr += '</tr>';
+              $('#plusmem').append(insertTr);
+                id='';
+                pw='';
+                name='';
+                insertTr='';
+
+            }
+            
+            
+            });        
+});
+</script>
+    
+</head>
+
+<body>
+    <h1>Member Manager</h1>
+    <hr>
+    <h2>회원등록</h2>
+    <form id="regform">
+        <table>
+        <tr>
+            <td>
+            <label>아이디(이메일)</label>
+                <input type="text" id="id">
+            </td>
+            <td>
+            <label>비밀번호</label>
+                <input type="text" id="pw">
+            </td>
+            <td>
+            <label>이름</label>
+                <input type="text" id="name">
+            </td>
+            <td>
+            <input type="button" id="button1" value="등록">
+            </td>            
+        </tr>
+        </table>        
+    </form>
+    <hr>
+    <h2>회원리스트</h2>
+ 
+        <table id="listtable">
+        <thead>    
+        <tr>
+            <th>index</th>
+            <th>아이디(이메일)</th>
+            <th>비밀번호</th>
+            <th>이름</th>
+            <th>관리</th>
+        </tr>
+        </thead>
+        <tbody id="plusmem">
+        </tbody>
+       
+    </table>
+</body>
+</html>
