@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="default.css">    
     <script>
 $(document).ready(function(){
+    //행삭제 
         var id='';
         var pw='';
         var name='';
@@ -30,18 +31,26 @@ $(document).ready(function(){
             insertTr += '<td>'+pw+'</td>';
             insertTr += '<td>'+name+'</td>';
             insertTr +=
-            '<td>'+'<a>삭제</a>'+'<a> 수정</a>'+'</td>';
+            '<td><button>삭제</button></td>';
             insertTr += '</tr>';
               $('#plusmem').append(insertTr);
                 id='';
                 pw='';
                 name='';
                 insertTr='';
-
+            $('#id').val('');
+            $('#pw').val('');
+            $('#name').val('');
             }
             
             
-            });        
+            });
+    
+   $('#listtable').on("click","button",function(){
+       $(this).closest("tr").remove()
+   });
+    
+    
 });
 </script>
     
