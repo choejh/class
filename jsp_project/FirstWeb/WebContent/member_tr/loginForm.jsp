@@ -1,19 +1,18 @@
-
-<!DOCTYPE html>
-<html lang="ko">
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>login</title>
+<title>Insert title here</title>
+<!DOCTYPE html>
+<html lang="ko">
 </head>
+
 <body>
     <h1>회원 로그인 </h1>
     <hr>
-    <form action="result_login.jsp" method="get">
+    <form action="login.jsp" method="post">
         <table>
             <tr>
                 <th><label for="userid">아이디</label></th>
@@ -28,13 +27,13 @@
                 </td>
             </tr>
             <tr>
-            	<th>
-            	<td>
-            		<input type="checkbox" id="chk" name="chk">아이디저장
-            	</td>
-            </tr>
-            <tr>
+                <th>
                 <td>
+                    <input type="checkbox" id="chk" name="chk">아이디저장
+                </td>
+            </tr>            
+            <tr>
+                <td >
                     
                 </td>
                 <td>
