@@ -3,22 +3,14 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	
-
-
-//데이터 받고
-//sql:insert
-//insert: insert_view
-//한글처리해
-
+<%  
+    
 
 request.setCharacterEncoding("UTF-8");
 
 String dname = request.getParameter("dname");
 String dloc = request.getParameter("dloc");
 String deptno =request.getParameter("deptno");
-
 
 
 
@@ -41,9 +33,9 @@ String deptno =request.getParameter("deptno");
 
 
 //데이터 입력시키기
-String sqlInsert = "insert into dept (deptno,dname,loc) values ('"+deptno+"','"+dname+"','"+dloc+"')";
+String sqlChange = "update dept set dname = '"+dname+"', dloc = '"+dloc+"' WHERE deptno = '"+deptno+"'";
 
-int resultCnt = stmt.executeUpdate(sqlInsert);
+int resultCnt = stmt.executeUpdate(sqlChange);
 if(resultCnt>0) {
 	System.out.println("데이터가 정상적으로 입력되었습니다.");
 } 
