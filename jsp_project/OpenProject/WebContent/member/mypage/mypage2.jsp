@@ -1,5 +1,7 @@
+<%@page import="member.LoginInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ include file="/include/loginCheck.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +19,22 @@
 	
 		
 	<div class="contents">
-		<h2 class="content_title">index</h2>
+		<h2 class="content_title">My page 1</h2>
 		<hr>
 		<div class="content">
-		인덱스 페이지 입니다.
+		<%=session.getAttribute("loginInfo") %>
+		<br>
+		
+		<%
+			LoginInfo loginInfo = (LoginInfo)session.getAttribute("loginInfo");
+			if(loginInfo != null){
+		
+		%>
+		<img alt="프로필사진" 
+		src="<%=request.getContextPath()%>/images/<%=loginInfo.getMemberPhoto()%>"
+		height="100"
+		><% } %>
+		
 		</div>
 	</div>	
 	

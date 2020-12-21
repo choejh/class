@@ -1,23 +1,32 @@
 <%@page import="util.CookieBox"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
+	<%
 	CookieBox cookieBox = new CookieBox(request);
 	String saveId = cookieBox.exists("uid") ? cookieBox.getValue("uid") : "";
 	String checked = cookieBox.exists("uid") ? " checked " : "";
-%>    
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<!DOCTYPE html>
-<html lang="ko">
+<link rel="styleSheet" href="<%= request.getContextPath() %>/css/default.css">
+<style>
+</style>
 </head>
 <body>
-    <h1>회원 로그인 </h1>
-    <hr>
-    <form action="login.jsp" method="post">
+	<%@ include file="/include/header.jsp" %>
+	
+	<%@ include file="/include/nav.jsp" %>
+	
+		
+	<div class="contents">
+		<h2 class="content_title">Login Form</h2>
+		<hr>
+		<div class="content">
+		<form action="login.jsp" method="post">
         <table>
             <tr>
                 <th><label for="userid">아이디</label></th>
@@ -47,7 +56,9 @@
             </tr>
         </table>
     </form>
-
+		</div>
+	</div>	
+	
+<%@ include file="/include/footer.jsp" %>
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/include/loginCheck.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,21 +10,33 @@
 <style>
 </style>
 </head>
-<body>
-	
-	<%@ include file="/include/header.jsp" %>
-	
-	<%@ include file="/include/nav.jsp" %>
-	
+<body >
+
+
+	<%@ include file="/include/header.jsp"  %>
 		
+	<%@ include file="/include/nav.jsp"  %>
+	
 	<div class="contents">
-		<h2 class="content_title">index</h2>
+		<h2 class="content_title">My Page 1</h2>
 		<hr>
 		<div class="content">
-		인덱스 페이지 입니다.
+		<%= session.getAttribute("loginInfo") %>
 		</div>
-	</div>	
+	</div>
 	
-<%@ include file="/include/footer.jsp" %>
+	<%@ include file="/include/footer.jsp" %>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
 </body>
 </html>
