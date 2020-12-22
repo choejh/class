@@ -18,8 +18,8 @@
 				}
 			%>
 			
-			<li><a href="<%=request.getContextPath()%>/member/mypage/mypage1.jsp">mypage1</a></li>
-			<li><a href="<%=request.getContextPath()%>/member/mypage/mypage2.jsp">mypage2</a></li>
+			<li><a href="${pageContext.request.contextPath}/member/mypage/mypage1.jsp">mypage1</a></li>
+			<li><a href="${pageContext.request.contextPath}/member/mypage/mypage2.jsp">mypage2</a></li>
 
 			<li><a href="#">HOME</a></li>
 		</ul>												

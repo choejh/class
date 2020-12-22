@@ -3,6 +3,7 @@
     pageEncoding="UTF-8"%>
 	<%
 	CookieBox cookieBox = new CookieBox(request);
+	
 	String saveId = cookieBox.exists("uid") ? cookieBox.getValue("uid") : "";
 	String checked = cookieBox.exists("uid") ? " checked " : "";
 %>

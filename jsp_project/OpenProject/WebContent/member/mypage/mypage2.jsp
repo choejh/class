@@ -22,7 +22,8 @@
 		<h2 class="content_title">My page 1</h2>
 		<hr>
 		<div class="content">
-		<%=session.getAttribute("loginInfo") %>
+	<%-- 	<%=session.getAttribute("loginInfo") %> --%>
+	${loginInfo}
 		<br>
 		
 		<%
@@ -30,10 +31,15 @@
 			if(loginInfo != null){
 		
 		%>
-		<img alt="프로필사진" 
+	<%-- 	<img alt="프로필사진" 
 		src="<%=request.getContextPath()%>/images/<%=loginInfo.getMemberPhoto()%>"
 		height="100"
-		><% } %>
+		> --%>
+			<img alt="프로필사진" 
+		src="${pageContext.request.contextPath}/images/${loginInfo.memberPhoto}"
+		height="100"
+		>
+		<% } %>
 		
 		</div>
 	</div>	
