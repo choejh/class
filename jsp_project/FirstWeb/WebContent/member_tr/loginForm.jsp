@@ -35,7 +35,7 @@
             <tr>
                 <th>
                 <td>
-                    <input type="checkbox" id="chk" name="chk">아이디저장
+                    <input type="checkbox" name="chk" value="on" <%= checked %>> 아이디 저장
                 </td>
             </tr>            
             <tr>
