@@ -1,23 +1,73 @@
 <!DOCTYPE html>
+<!-- #F0F2F1 #BCBFA3 #72734F #8C7158 #8C5B49 -->
 <html lang="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        background-color: #F0F2F1;
+    }
+    .frame{
+     width: 1000px;
+    margin: 0 auto;
+    }
+    header{
+    background-color: #BCBFA3;
+    height:130px;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    }
+    header> h1 {
+    color: #8C5B49;
+    }
+    nav{
+    background-color: #BCBFA3;
+    height: 80px;
+    }
+    aside{
+    width: 330px;
+    background-color: #72734F;
+    float: left;
+    }
+    .contents{
+    width:670px;
+    float: left;
+    background-color: #F0F2F1;
+    }
+    footer{
+    background-color: #BCBFA3;
+    clear: left;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    }
+    
+</style>
 <body>
-<header>
-여기는 헤더다    
-</header>
-<nav>
-네비게이션    
-</nav>
-<aside>
-옆구리    
-</aside>
-<footer>
-밑
-</footer>
+<div class="frame">
+    <header>
+        <h1>Wisdom's homePage</h1>    
+    </header>
+    <nav>
+    네비게이션    
+    </nav>
+    <div class="inside">
+        <aside>
+        옆구리    
+        </aside>
+        <div class="contents">
+        내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용
+        </div>
+    </div>    
+    <footer>
+    밑밑밑밑
+    </footer>
+</div>    
 </body>
 </html>
