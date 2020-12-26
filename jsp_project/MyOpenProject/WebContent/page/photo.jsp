@@ -18,9 +18,8 @@
     <div class="inside">
 <%@ include file="/include/aside.jsp" %>
     <div class="contents">
-        내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용
+	회원 전용 사진관입니다 ^^
     </div>
-
     </div>    
     <footer>
     밑밑밑밑

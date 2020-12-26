@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +24,9 @@
    			<td><input type="checkbox" name="chk" value="on">아이디저장</td>
    		</tr>
    	</table>
-   	<input type="submit" value="로그인" id="login"> <div id="join">회원가입</div>
-   	</form>
+	   <input type="submit" value="로그인" id=login>
+    </form>
+    	<button id="join" onclick="location.href='${pageContext.request.contextPath}/page/joinForm.jsp'">회원가입</button>
    </aside>
 
 </body>

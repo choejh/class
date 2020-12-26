@@ -22,33 +22,46 @@
     background-color: #BCBFA3;
     height: 30px;
     }
+    nav>ul{
+      background-color: #BCBFA3;
+		overflow: hidden;
+		list-style: none;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	
+		nav>ul>li{
+		background-color: #BCBFA3;
+		float: left;
+		padding: 5px 20px;
+	}
   /* 옆 */  
     aside{
-    width: 280px;
+    width: 330px;
     background-color: #72734F;
     float: left;
     }
-    aside>form{
-    background-color: #72734F;
-    }
-    th,td,label{
-    background-color: #72734F;
-    }
-    aside>form>table{
-    background-color: #72734F;
+    
+		aside>form{
+		position: relative;
+		border: 1px solid black;
+		width:270px;
+		left: 35px;
+		top: 10px;
+		}
+    #login{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: 20px;
     }
     #join{
-    width: 80px;
-    height: 20px;
     position: relative;
+    width: 100px;
+    height: 30px;
     top: -21px;
-    left:130px;
-    } */
-    form>input{
-    width:80px;
-    height: 20px;
+    left: 190px;
     }
-    
        
     .contents{
     width:670px;

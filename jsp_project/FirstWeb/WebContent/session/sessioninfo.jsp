@@ -19,7 +19,7 @@
 	<h3>
 		세션 ID : <%=session.getId() %> <br>
 		세션 생성 시간 : <%=session.getCreationTime() %>,<%=format.format(session.getCreationTime()) %> <br>
-		최근 접속 시간 : <%=session.getLastAccessedTime()%>, <% format.format(session.getLastAccessedTime())%>
+		최근 접속 시간 : <%=session.getLastAccessedTime()%>, <%=format.format(session.getLastAccessedTime())%>
 	</h3>
 </body>
 </html>

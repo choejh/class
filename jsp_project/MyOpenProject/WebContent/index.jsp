@@ -18,7 +18,8 @@
     <div class="inside">
 <%@ include file="/include/aside.jsp" %>
     <div class="contents">
-       메인페이지 입니다^^
+		안녕하세요 wisdom's 홈페이지에 오신것을 환영합니다^^<br>
+		이 곳은 메인 페이지 입니다 
     </div>
     </div>    
     <footer>
