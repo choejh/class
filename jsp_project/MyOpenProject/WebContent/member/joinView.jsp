@@ -18,8 +18,14 @@
     <div class="inside">
 <%@ include file="/include/aside.jsp" %>
     <div class="contents">
-		안녕하세요 wisdom's 홈페이지에 오신것을 환영합니다^^<br>
-		이 곳은 메인 페이지 입니다 
+    <c:if test="${result>0}">
+		회원가입이 완료되었습니다.
+		</c:if>
+		<c:if test="${result eq 0}">
+		회원가입이 정상 처리되지 않았습니다.
+		</c:if>
+		
+		
     </div>
     </div>    
 <%@ include file="/include/footer.jsp" %>

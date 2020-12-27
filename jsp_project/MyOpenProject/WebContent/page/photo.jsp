@@ -21,9 +21,7 @@
 	회원 전용 사진관입니다 ^^
     </div>
     </div>    
-    <footer>
-    밑밑밑밑
-    </footer>
+<%@ include file="/include/footer.jsp" %>
 </div>   
 </body>
 </html>

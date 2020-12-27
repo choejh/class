@@ -26,7 +26,7 @@
    	</table>
 	   <input type="submit" value="로그인" id=login>
     </form>
-    	<button id="join" onclick="location.href='${pageContext.request.contextPath}/page/joinForm.jsp'">회원가입</button>
+    	<button id="join" onclick="location.href='${pageContext.request.contextPath}/member/joinForm.jsp'">회원가입</button>
    </aside>
 
 </body>
