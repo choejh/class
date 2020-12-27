@@ -1,6 +1,15 @@
+<%@page import="util.CookieBox"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>        
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
+<%
+CookieBox cookieBox = new CookieBox(request);
+String saveId=cookieBox.exists("uid")? cookieBox.getValue("uid"):"";
+String checked=cookieBox.exists("uid")? "checked":"";
+
+
+%>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +18,12 @@
 </head>
 <body>
    <aside>
-   	<form>
+   	<form action="<c:url value="/member/login.jsp"/>" method="post">
    	<table>
    		<tr>
    			<th><label for="userid">아이디</label></th>
-   			<td><input type="text" id="userid" name="userid"></td>
+   			<td><input type="text" id="userid" name="userid"
+   			value="<%=saveId%>"></td>
    		</tr>
    		<tr>
    			<th><label for="pw">비밀번호</label></th>
@@ -21,7 +31,7 @@
    		</tr>
    		<tr>
    			<th></th>
-   			<td><input type="checkbox" name="chk" value="on">아이디저장</td>
+   			<td><input type="checkbox" name="chk" value="on" <%=checked%>>아이디저장</td>
    		</tr>
    	</table>
 	   <input type="submit" value="로그인" id=login>

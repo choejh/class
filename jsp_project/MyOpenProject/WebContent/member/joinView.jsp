@@ -16,7 +16,16 @@
 <%@ include file="/include/header.jsp" %>
 <%@ include file="/include/nav.jsp" %>
     <div class="inside">
-<%@ include file="/include/aside.jsp" %>
+<%
+if(session != null && session.getAttribute("loginInfo")!=null){
+%>
+	<%@ include file="/include/aside2.jsp" %>
+<%
+}else{
+	%> <%@ include file="/include/aside.jsp"%>
+<%
+}
+%>
     <div class="contents">
     <c:if test="${result>0}">
 		회원가입이 완료되었습니다.

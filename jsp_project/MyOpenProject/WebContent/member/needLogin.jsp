@@ -16,20 +16,9 @@
 <%@ include file="/include/header.jsp" %>
 <%@ include file="/include/nav.jsp" %>
     <div class="inside">
-<%
-if(session != null && session.getAttribute("loginInfo")!=null){
-%>
-	<%@ include file="/include/aside2.jsp" %>
-<%
-}else{
-	%> <%@ include file="/include/aside.jsp"%>
-<%
-}
-%>
+<%@ include file="/include/aside.jsp" %>
     <div class="contents">
-    <h2>회원 전용 사진관 입니다^^</h2>
-	<img src="../images/2.jpg" alt="아이스베어"> <br>
-	<img src="../images/3.jpg" alt="아이스베어와 그리즐리">
+		<h2>회원만 입장 가능합니다. 로그인 하세요.</h2>
     </div>
     </div>    
 <%@ include file="/include/footer.jsp" %>

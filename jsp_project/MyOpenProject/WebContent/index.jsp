@@ -13,10 +13,20 @@
 </head>
 <body>
 <div class="frame">
+
 <%@ include file="/include/header.jsp" %>
 <%@ include file="/include/nav.jsp" %>
     <div class="inside">
-<%@ include file="/include/aside.jsp" %>
+<%
+if(session != null && session.getAttribute("loginInfo")!=null){
+%>
+	<%@ include file="/include/aside2.jsp" %>
+<%
+}else{
+	%> <%@ include file="/include/aside.jsp"%>
+<%
+}
+%>
     <div class="contents">
 		안녕하세요 wisdom's 홈페이지에 오신것을 환영합니다^^<br>
 		이 곳은 메인 페이지 입니다 

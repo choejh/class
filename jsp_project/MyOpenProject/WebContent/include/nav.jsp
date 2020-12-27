@@ -12,7 +12,7 @@
     <ul>
     	<li><a href="<c:url value="/index.jsp"/>">메인</a></li>
       <li><a href="<c:url value="/page/photo.jsp"/>">회원전용 사진</a></li>
-    	<li>세계시계</li>
+    	<li><a href="<c:url value="/page/world.jsp"/>">세계시계</a></li>
     	<li>기타1</li>
     	<li>기타2</li>
     	<li>기타3</li>

@@ -27,9 +27,7 @@ if(session != null && session.getAttribute("loginInfo")!=null){
 }
 %>
     <div class="contents">
-    <h2>회원 전용 사진관 입니다^^</h2>
-	<img src="../images/2.jpg" alt="아이스베어"> <br>
-	<img src="../images/3.jpg" alt="아이스베어와 그리즐리">
+		${userId} 회원님 안녕하세요 ^^
     </div>
     </div>    
 <%@ include file="/include/footer.jsp" %>

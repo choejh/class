@@ -41,6 +41,7 @@ ${now}
 <br>
 <fmt:formatDate value="${now}" pattern="yyyy-MM-dd a h:mm" timeZone="Hongkong"/> <!--2020-12-23 오전 10:18 -->
 <br>
+베를린
 <fmt:formatDate value="${now}" pattern="yyyy-MM-dd a h:mm" timeZone="Europe/Berlin"/> <!--2020-12-23 오전 3:24 -->
 </body>
 </html>

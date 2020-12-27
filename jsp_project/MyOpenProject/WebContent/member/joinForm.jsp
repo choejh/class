@@ -12,11 +12,19 @@
 </style>
 </head>
 <body>
-<div class="frame">
 <%@ include file="/include/header.jsp" %>
 <%@ include file="/include/nav.jsp" %>
     <div class="inside">
-<%@ include file="/include/aside.jsp" %>
+<%
+if(session != null && session.getAttribute("loginInfo")!=null){
+%>
+	<%@ include file="/include/aside2.jsp" %>
+<%
+}else{
+	%> <%@ include file="/include/aside.jsp"%>
+<%
+}
+%>
     <div class="contents">
 <form action="join.jsp" method="post" enctype="multipart/form-data">
         <table>
