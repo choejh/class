@@ -34,13 +34,13 @@
 				<th>사진</th>
 				<th>가입일시</th>
 			</tr>
-			<c:if test="${empty memberList}">
+			<c:if test="${empty listView.memberList}">
 			<tr>
 				<td colspan="5">회원정보가 없습니다.</td>
 			</tr>
 			</c:if>
-			<c:if test="${!empty memberList}">
-			<c:forEach items="${memberList}" var="member">
+			<c:if test="${!empty listView.memberList}">
+			<c:forEach items="${listView.memberList}" var="member">
 			<tr>
 				<td>${member.userId}</td>
 				<td>${member.password}</td>
@@ -53,6 +53,11 @@
 			</c:forEach>
 			</c:if>
 		</table>
+		<div class="paging">
+		<c:forEach var="num" begin="1" end="${listView.pageTotalCount}">
+		[<a href="memberList.jsp?page=${num}">${num}</a>]
+		</c:forEach>
+		</div>
 	</div>
 	</div>
 <%@ include file="/include/footer.jsp" %>

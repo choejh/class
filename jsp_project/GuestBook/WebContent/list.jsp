@@ -119,7 +119,7 @@
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td><a href="#">삭제하기</a></td>
+					<td><a href="deleteconfirm.jsp?mid=${message.id}">삭제하기</a></td>
 				</tr>
 			</table>
 		</div>
