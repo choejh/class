@@ -17,7 +17,7 @@ public class OrderController {
 	}
 
 	
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST) //넘어온 애들을 userOrder안에 넣는느낌?
 	public String orderComplete(@ModelAttribute("userOrder") OrderCommand order) {
 		System.out.println(order);
 		return "order/orderComplete";
