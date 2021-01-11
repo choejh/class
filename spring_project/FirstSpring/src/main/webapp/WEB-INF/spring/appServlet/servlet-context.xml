@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 	mvc관련설정 -->
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
@@ -34,11 +35,20 @@
 		<!-- <beans:property name="defaultEncoding" value="utf-8"/> -->
 	</beans:bean>
 	
+	<!-- <beans:bean id="memberDao"
+				class="com.aia.firstspring.member.dao.MemberDao">
+		<constructor-arg ref="jdbcTemplate"/>
+	</beans:bean>
+	
+	<beans:bean id="memberListService"
+				class="com.aia.firstspring.member.service.MemberListService"/>
+	
+	 -->
 	
 	
 	
 	
-	
+
 	
 	
 	
