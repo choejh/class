@@ -2,27 +2,42 @@ package com.aia.firstspring.member.service;
 
 import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aia.firstspring.member.dao.MemberDao;
+import com.aia.firstspring.member.dao.MemberInterfaceDao;
+import com.aia.firstspring.member.dao.MybatisMemberDao;
 import com.aia.firstspring.member.domain.Member;
 
 @Service
 public class MemberListService {
+//	@Autowired
+//	MemberDao dao;
+	
+	// @Autowired
+	//private MybatisMemberDao dao;
+	private MemberInterfaceDao dao;
+	
 	@Autowired
-	MemberDao dao;
+	private SqlSessionTemplate template;
 	
 //	public MemberListService(MemberDao dao) {
 //		this.dao = dao;
 //	}
 	
 	public List<Member> getMemberList(){
-		return dao.selectMemberList();	//MemberDao에서 가져옴. 전부출력을 위해
+		
+		dao = template.getMapper(MemberInterfaceDao.class);
+		
+		return dao.selectMemberList();	//MemberDao에서 가져옴. 전부출력 위해(나) 
 	}
 	
 	public int getmemberTotalCount() {
-		return dao.selectTotalCount();
+		//return dao.selectTotalCount();
+		dao = template.getMapper(MemberInterfaceDao.class);
+		return dao.totalCnt();
 	}
 	
 	

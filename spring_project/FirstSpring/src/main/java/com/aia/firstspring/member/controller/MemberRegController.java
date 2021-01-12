@@ -29,6 +29,7 @@ public class MemberRegController {
 		model.addAttribute("resultCnt", resultCnt);
 		
 		String view = "member/reg";
+		
 		if(resultCnt==1) { //정상입력되면
 			view = "redirect:/member/list";
 		}
