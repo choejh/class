@@ -1,14 +1,10 @@
 package com.aia.op.member.dao;
 
 import com.aia.op.member.domain.Member;
-import com.aia.op.member.domain.MemberRegRequest;
 
 public interface MemberDao {
-	
-	//public abstract
+
+	// public abstract
 	int insertMember(Member member);
 	Member selectLogin(String id, String pw);
-	
-	
-	
 }

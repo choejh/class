@@ -27,7 +27,7 @@ public class MemberLoginService {
 		String pw = request.getParameter("pw");
 		String chk = request.getParameter("chk");
 		
-		dao=template.getMapper(MemberDao.class);
+		dao = template.getMapper(MemberDao.class);
 		
 		boolean loginCheck = false;
 		

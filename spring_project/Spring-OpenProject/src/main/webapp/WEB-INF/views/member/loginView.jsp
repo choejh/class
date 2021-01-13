@@ -1,15 +1,13 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<c:if test="${not loginChk}">
+<c:if test="${not loginCheck}">
 <script>
 		alert("아이디 또는 비밀번호가 틀립니다. 다시 로그인 해주세요.");
 		history.go(-1);
 </script>
 </c:if>
-<c:if test="${loginChk}">
+<c:if test="${loginCheck}">
 <!DOCTYPE html>
 <html>
 <head>
