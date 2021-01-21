@@ -52,7 +52,7 @@ public class Member {
 	}
 	
 	public Date getToDate() { //${member.toDate} 게터메서드 호출
-		return new Date(getRegdate().getTime());
+		return getRegdate()==null?null:new Date(getRegdate().getTime());
 	}
 	
 	@Override

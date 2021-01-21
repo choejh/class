@@ -30,4 +30,9 @@
 	<select id="totalCnt" resultType="int">
 		select count(*) from member
 	</select>
+	
+	<select id="selectByIdx"
+					resultType="com.aia.firstspring.member.domain.Member">
+	select * from member where idx=#{number}
+	</select>
 </mapper>
