@@ -34,4 +34,15 @@ public interface MemberDao {
 	//회원정보 update
 	int updateMember(Member member);
 	
+	//id존재 유무 확인
+	//객체를 만드는 것 보다 count함수를 써서 int타입을 만드는게 좋다네
+	int selectMemberByIdCount(String id);
+	
+	//idx,verify 조건으로 조회ㅐ
+	int selectMemberByIdxVerify(int index);
+	
+	//인증처리 verify='Y'
+	int updateMemberVerify(int idx, String code);
+	
+	
 }

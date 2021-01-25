@@ -27,7 +27,7 @@ public class MemberRegRequest {
 		this.membername = membername;
 	}
 	
-	public Member getTomember() {
+	public Member getToMember() {
 		Member member = new Member();
 		member.setMemberid(memberid);
 		member.setPassword(password);

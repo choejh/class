@@ -19,7 +19,7 @@
 2021.01.20
 Rest ajax 사용 목적으로 코드 수정
 -->	
-	<form method="post">
+	<form id="regForm">
 		아이디 <input type="text" name="memberid" id="memberid"><br>
 		비밀번호 <input type="password" name="password" id="password"> <br>
 		이름 <input type="text" name="membername" id="membername"><br>

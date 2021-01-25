@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,7 +28,7 @@ public class RestApiController {
 	
 	@Autowired
 	private MemberListService listService;
-	
+	@Autowired
 	private MemberRegService regService;
 	
 //	@GetMapping("/{idx}") //GET /rest/ver1/members/39 
@@ -47,7 +46,7 @@ public class RestApiController {
 	
 	@GetMapping("/map")	// /get/ber1/members/map
 	public Map<Integer,Member> getMemberListMap(){
-		Map<Integer,Member> memberMap = new HashMap<Integer, Member>();
+		Map<Integer, Member> memberMap = new HashMap<Integer, Member>();
 		for (Member member : listService.getMemberList()) {
 			memberMap.put(member.getIdx(), member);
 		} 
@@ -63,19 +62,19 @@ public class RestApiController {
 		
 	}
 	//@RequestMapping(method=RequestMethod.POST)
-	@PostMapping//위와 같다.
+	@PostMapping //위와 같다.
 	public String insertMember(
 			@RequestBody MemberRegRequest regRequest 
 			) {
 		
-		//SString result = "N";
+		//String result = "N";
 		
 		System.out.println(regRequest);
-		System.out.println(regRequest.getTomember());
+		System.out.println(regRequest.getToMember());
 		
 		//regservice.insertMember(regRequest.getTomember());
 		
-		return regService.insertMember(regRequest.getTomember())>0 ? "Y" : "N";
+		return regService.insertMember(regRequest.getToMember())>0 ? "Y" : "N";
 		
 	}
 	
