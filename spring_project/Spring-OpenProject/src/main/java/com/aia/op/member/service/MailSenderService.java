@@ -29,15 +29,14 @@ public class MailSenderService {
 			
 			//메일 제목
 			message.setSubject("[안내] 회원가입을 축하합니다.","utf-8");
-			
-			//메일 내용 컨텐츠 html
+			// 메일 내용 컨텐츠 html
 			String html = "<h1>회원가입을 축하합니다.</h1>";
 			html += "<h3>인증을 위해 아래 링크를 클릭해주세요</h3>";
 			html += "<a href=\"http://localhost:8080/op/member/verify?id="+member.getIdx()+"&code="+member.getCode()+"\">인증하기</a>";
 			//message에 내용 적용
 			message.setText(html,"utf-8","html");
 			//from 설정
-			message.setFrom(new InternetAddress("1004jihyee@naver.com"));//이거는 상관없는거같음
+			message.setFrom(new InternetAddress("jhyee@naver.com"));//이거는 상관없는거같음
 			//to 설정
 			message.addRecipient(RecipientType.TO, new InternetAddress(member.getMemberid(),member.getMembername()+" 고객님", "utf-8"));
 	

@@ -15,6 +15,8 @@ public class MemberVerifyService {
 	private SqlSessionTemplate template;
 	
 	public int memberVerify(int idx,String code) {
+		dao=template.getMapper(MemberDao.class);
+		
 		int result=0; //o->잘못된 요청, 1->인증완료, 3-> 이미인증
 		int isVerify= dao.selectMemberByIdxVerify(idx);
 		//0 or 1
