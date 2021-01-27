@@ -45,6 +45,10 @@
 	<lebel value="info"/>
 </logger>
 
+<logger name="jdbc.resultsettable">
+	<lebel value="info"/>
+</logger>
+
 <logger name="jdbc.connection">
 	<lebel value="info"/>
 </logger>

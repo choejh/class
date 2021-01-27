@@ -97,6 +97,20 @@ div.searchBox {
 
 			</div>
 			
+			<nav aria-label="Page navigation example">
+  <ul class="pagination">
+  <c:if test="${listView.totalMemberCount>0}">
+		<c:forEach begin="1" end="${listView.totalPageCount}" var="num">
+    <li class="page-item"><a class="${listView.pageNumber eq num ? 'nowpage' : ''}" href="<c:url value="/member/list"/>?p=${num}&searchType=${param.searchType}&keyword=${param.keyword}">${num}</a>
+ 		</li>//////////////////////////////////////////////////////////////
+ 		</c:forEach>
+	</c:if>
+ 
+  </ul>
+</nav>
+			
+			
+			
 				<div class="paging">
 					<c:if test="${listView.totalMemberCount>0}">
 						<c:forEach begin="1" end="${listView.totalPageCount}" var="num">
