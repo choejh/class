@@ -51,8 +51,8 @@
 		<beans:property name="host" value="smtp.gmail.com" />
 		<beans:property name="port" value="587" />
 		<beans:property name="username"
-			value="aia.jin.email@gmail.com" />
-		<beans:property name="password" value="!jin8548" />
+			value="gangajizzang@gmail.com" />
+		<beans:property name="password" value="gaezzang!" />
 		<beans:property name="defaultEncoding" value="utf-8" />
 		<beans:property name="javaMailProperties">
 			<beans:props>
@@ -67,10 +67,10 @@
 
 
 	<!-- @Transactional 애노테이션 활성화 설정 -->
-	<tx:annotation-driven />
-		<!-- <tx:annotation-driven
+	<!-- <tx:annotation-driven /> -->
+	<tx:annotation-driven
 		transaction-manager="transactionManager" />
- -->
+
 
 
 
