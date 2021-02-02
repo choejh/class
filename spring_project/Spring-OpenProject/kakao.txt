@@ -1,0 +1,19 @@
+SNS platform
+
+MyApplication 
+id -> 
+pw ->
+
+카카오 플랫폼 
+LOGIN 인증: ID/PW --> 카카오 회원이야 라는 인증을 나의 APP에 토큰 형태로 줌
+1) 개인정보 제공 서비스
+2) 카카오 페이/ VISION 을 사용할 수 있도록 처리
+
+제공목적
+1) 회원가입 쉽게 하기
+2) 개인정보를 보관 관리할 필요 X
+
+해야할 일
+1) MyApplication 등록
+
+https://developers.kakao.com/
